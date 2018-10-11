@@ -68,6 +68,9 @@ body {
       .header.green {
         background: url("../images/bg-header-green.jpg") top center no-repeat; } }
 
+.navigation .container {
+  padding: 0; }
+
 .navigation .menu-container {
   position: relative;
   overflow: hidden;
@@ -97,7 +100,8 @@ body {
 @media (min-width: 768px) {
   .navigation .menu-container .menu-list ul {
     float: right;
-    width: 300px; }
+    width: 300px;
+    margin-right: 15px; }
   .navigation .desktop {
     position: relative;
     height: 0;
@@ -116,7 +120,7 @@ body {
   background: url("../images/bg-hexagons-section.jpg") top center no-repeat #d3d700; }
   .hexagons .placeholder {
     text-align: center;
-    height: 900px;
+    min-height: 600px;
     padding-top: 200px;
     background: black;
     color: white; }
