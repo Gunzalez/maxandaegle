@@ -54,6 +54,18 @@ p {
 
 form {
     margin: 45px 0;
+
+    label {
+        display: none;
+    }
+
+    @media (min-width: $breakpoint3){
+
+        label {
+            display: block;
+        }
+
+    }
 }
 
 

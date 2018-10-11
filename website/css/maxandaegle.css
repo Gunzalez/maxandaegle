@@ -41,6 +41,11 @@ p {
 
 form {
   margin: 45px 0; }
+  form label {
+    display: none; }
+  @media (min-width: 992px) {
+    form label {
+      display: block; } }
 
 body {
   background: #ffffff;
