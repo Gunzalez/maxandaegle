@@ -24,25 +24,34 @@ body {
     position: relative;
 }
 
+
+h1, h2, h3, h4, h5 {
+    padding: 0;
+    margin: 0;
+}
+
 h1 {
-    font-size: 80px;
+    font-size: 45px;
 }
 
 h2 {
+    font-size: 30px;
+    padding-bottom: 12px;
+    padding-top: 5px;
+}
+
+h3 {
     font-size: 25px;
+    padding-bottom: 12px;
+    padding-top: 5px;
+}
+
+p {
+    padding-bottom: 12px;
+    margin: 0;
 }
 
 
-
-//
-//
-//h1, h2, h3, h4, h5 {
-//    padding: 0;
-//    margin: 0 0 15px 0;
-//    line-height: 100%;
-//    font-family: $headerFont;
-//    font-weight: 700;
-//}
 //
 //
 //p, ol, ul {
