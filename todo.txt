@@ -1,0 +1,24 @@
+
+Stuff to do
+=============================
+* Animated coloured button
+* Set up PHP mailer
+* Reset ribbon on page resize
+
+
+
+DONE
+=============================
+* Form section
+* Footer list stile, needs dots
+* Favicon
+* Upload website
+* Set up email address
+
+
+
+
+Endless
+================
+* Look at all copy...
+* Tweak some more...
