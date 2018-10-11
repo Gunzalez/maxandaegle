@@ -106,5 +106,17 @@ body {
 
 .imaged {
   background: url("../images/bg-about-us-copy.jpg") top center no-repeat #bfcad0;
-  padding-top: 800px;
+  padding-top: 750px;
   min-height: 1040px; }
+  @media (min-width: 992px) {
+    .imaged {
+      padding-top: 800px; } }
+
+.hexagons {
+  background: url("../images/bg-hexagons-section.jpg") top center no-repeat #d3d800; }
+  .hexagons .placeholder {
+    text-align: center;
+    margin: 0 auto;
+    height: 400px;
+    background: black;
+    color: white; }

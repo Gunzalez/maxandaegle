@@ -108,6 +108,7 @@ body {
     }
 
     @media (min-width: $breakpoint2){
+
         .nav {
 
             .menu {
@@ -130,8 +131,26 @@ body {
 
 .imaged {
     background: url("../images/bg-about-us-copy.jpg") top center no-repeat $brand-gray-dark;
-    padding-top: 800px;
+    padding-top: 750px;
     min-height: 1040px;
+
+    @media (min-width: $breakpoint3){
+
+        padding-top: 800px;
+    }
+}
+
+
+.hexagons {
+    background: url("../images/bg-hexagons-section.jpg") top center no-repeat $brand-yellow-strong;
+
+    .placeholder {
+        text-align: center;
+        margin: 0 auto;
+        height: 400px;
+        background: black;
+        color: white;
+    }
 }
 
 
