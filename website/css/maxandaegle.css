@@ -39,6 +39,9 @@ p {
   padding-bottom: 12px;
   margin: 0; }
 
+form {
+  margin: 45px 0; }
+
 body {
   background: #ffffff;
   color: #000104; }
