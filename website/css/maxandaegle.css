@@ -104,3 +104,8 @@ body {
     height: 0;
     overflow: visible;
     z-index: 10; } }
+
+.imaged {
+  background: url("../images/bg-about-us-copy.jpg") top center no-repeat #bfcad0;
+  padding-top: 800px;
+  min-height: 1040px; }

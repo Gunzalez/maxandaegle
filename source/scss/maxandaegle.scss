@@ -126,7 +126,12 @@ body {
             z-index: 10;
         }
     }
+}
 
+.imaged {
+    background: url("../images/bg-about-us-copy.jpg") top center no-repeat $brand-gray-dark;
+    padding-top: 800px;
+    min-height: 1040px;
 }
 
 
