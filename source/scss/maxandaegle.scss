@@ -175,7 +175,10 @@ body {
 }
 
 .footer {
-    background: url("../images/bg-addendum.jpg") center -60px no-repeat;
+
+    &.footer-top {
+        background: url("../images/bg-footer-top.jpg") center -60px no-repeat;
+    }
 
     .menu-list {
         background: $brand-gray-darker;
