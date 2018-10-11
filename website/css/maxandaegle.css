@@ -68,38 +68,34 @@ body {
       .header.green {
         background: url("../images/bg-header-green.jpg") top center no-repeat; } }
 
-.navigation .nav {
+.navigation .menu-container {
   position: relative;
   overflow: hidden;
   height: 0;
   transition: height 0.2s ease-out; }
-  .navigation .nav .menu {
+  .navigation .menu-container .menu-list {
     width: 100%;
     position: absolute;
     bottom: 0; }
-  .navigation .nav ul {
+  .navigation .menu-container ul {
     padding: 0;
     margin: 0;
     list-style: none;
     background: #b1c0c9;
     width: 100%; }
-  .navigation .nav li {
+  .navigation .menu-container li {
     border-bottom: 1px solid #eff3f4; }
-  .navigation .nav a {
+  .navigation .menu-container a {
     padding: 12px 18px 11px 18px;
     display: block;
     color: #2d2d2d;
     transition: background-color 0.33s;
     text-decoration: none; }
-    .navigation .nav a:hover {
+    .navigation .menu-container a:hover {
       background: #cfd8de; }
 
-@media (max-width: 992px) {
-  .navigation .container {
-    padding: 0; } }
-
 @media (min-width: 768px) {
-  .navigation .nav .menu ul {
+  .navigation .menu-container .menu-list ul {
     float: right;
     width: 300px; }
   .navigation .desktop {
@@ -129,19 +125,19 @@ body {
 
 .footer {
   background: url("../images/bg-addendum.jpg") center -60px no-repeat; }
-  .footer .nav {
+  .footer .menu-list {
     background: #3a3c44;
     padding: 30px; }
-    .footer .nav ul {
+    .footer .menu-list ul {
       margin: 0;
       padding: 0;
       list-style: none;
       text-align: center;
       width: 100%; }
-    .footer .nav li {
+    .footer .menu-list li {
       display: inline;
       padding-right: 12px; }
-    .footer .nav a {
+    .footer .menu-list a {
       display: inline-block;
       text-align: center;
       background-image: url("../images/bg-footer-nav-links.svg");
@@ -151,10 +147,10 @@ body {
       line-height: 34px;
       color: #3a3c44; }
   @media (min-width: 992px) {
-    .footer .nav {
+    .footer .menu-list {
       margin-top: 100px;
       background: none; }
-      .footer .nav ul {
+      .footer .menu-list ul {
         text-align: left; } }
 
 .inner-footer {
