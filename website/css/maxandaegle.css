@@ -113,7 +113,8 @@ body {
       padding-top: 800px; } }
 
 .hexagons {
-  background: url("../images/bg-hexagons-section.jpg") top center no-repeat #d3d800; }
+  background: url("../images/bg-hexagons-section.jpg") top center no-repeat #c3d800;
+  margin-bottom: -40px; }
   .hexagons .placeholder {
     text-align: center;
     margin: 0 auto;
