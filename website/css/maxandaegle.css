@@ -45,7 +45,10 @@ form {
     display: none; }
   @media (min-width: 992px) {
     form label {
-      display: block; } }
+      display: block; }
+    form .form-group textarea::placeholder,
+    form .form-group input::placeholder {
+      color: #ffffff; } }
 
 body {
   background: #ffffff;
