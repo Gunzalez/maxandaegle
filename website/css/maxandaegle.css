@@ -149,30 +149,6 @@ body {
   background: #ffffff;
   color: #2d2d2d; }
 
-.hero {
-  background-size: cover;
-  height: 480px;
-  background-position: center center;
-  background-color: #000000;
-  background-image: url("../images/banner.jpg");
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #ffffff; }
-  @media (min-width: 992px) {
-    .hero .text p {
-      font-size: 1.7rem; } }
-  .hero .logo {
-    width: 120px;
-    margin-bottom: 15px; }
-    @media (min-width: 992px) {
-      .hero .logo {
-        width: 180px; } }
-  @media (min-width: 992px) {
-    .hero {
-      height: 780px; } }
-
 .ribbon {
   background: #ffffff;
   height: 60px;
@@ -249,53 +225,6 @@ body {
 
 em {
   text-decoration: underline; }
-
-._mobile {
-  background: url("../images/bg-hmm.jpg"); }
-  ._mobile .item {
-    text-align: center; }
-    ._mobile .item h4 {
-      padding-bottom: 5px;
-      margin-bottom: 0; }
-    ._mobile .item p {
-      padding-bottom: 15px;
-      margin-bottom: 0; }
-    ._mobile .item img[data-bg="1"] {
-      background-image: url("../images/mobile-bg-1.png"); }
-    ._mobile .item img[data-bg="2"] {
-      background-image: url("../images/mobile-bg-2.png"); }
-    ._mobile .item img[data-bg="3"] {
-      background-image: url("../images/mobile-bg-3.png"); }
-    ._mobile .item img {
-      width: 250px;
-      margin: 0 auto 10px auto;
-      display: block;
-      padding: 8px;
-      background-position: center center;
-      background-repeat: repeat-y;
-      background-size: cover; }
-    ._mobile .item .switches {
-      text-align: center;
-      margin-bottom: 20px; }
-      ._mobile .item .switches a {
-        font-weight: bold;
-        font-size: 1.2rem;
-        display: inline-block;
-        text-decoration: none;
-        padding: 10px 15px;
-        margin: 0 5px; }
-        ._mobile .item .switches a.active {
-          color: #2d2d2d;
-          cursor: default; }
-      ._mobile .item .switches.loading {
-        display: none; }
-  @media (min-width: 992px) {
-    ._mobile .showcase {
-      display: flex;
-      max-width: 1400px;
-      margin: 0 auto;
-      justify-content: space-around;
-      padding: 0 30px; } }
 
 .footer {
   background: #2d2d2d;

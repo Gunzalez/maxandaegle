@@ -6,40 +6,6 @@ body {
     color: $brand-dark;
 }
 
-.hero {
-    background-size: cover;
-    height: 480px;
-    background-position: center center;
-    background-color: $brand-black;
-    background-image: url("../images/banner.jpg");
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #ffffff;
-
-    .text {
-
-        @media (min-width: $breakpoint2){
-            p {
-                font-size: 1.7rem;
-            }
-        }
-    }
-
-    .logo {
-        width: 120px;
-        margin-bottom: 15px;
-
-        @media (min-width: $breakpoint2){
-            width: 180px;
-        }
-    }
-
-    @media (min-width: $breakpoint2){
-        height: 780px;
-    }
-}
 
 .ribbon {
     background: #ffffff;
@@ -161,79 +127,7 @@ em {
     text-decoration: underline;
 }
 
-._mobile {
-    background: url("../images/bg-hmm.jpg");
 
-    .item {
-        text-align: center;
-
-        h4 {
-            padding-bottom: 5px;
-            margin-bottom: 0;
-        }
-
-        p {
-            padding-bottom: 15px;
-            margin-bottom: 0;
-        }
-
-        img {
-            &[data-bg="1"]{
-                background-image: url("../images/mobile-bg-1.png");
-            }
-            &[data-bg="2"]{
-                background-image: url("../images/mobile-bg-2.png");
-            }
-            &[data-bg="3"]{
-                background-image: url("../images/mobile-bg-3.png");
-            }
-        }
-
-        img {
-            width: 250px;
-            margin: 0 auto 10px auto;
-            display: block;
-            padding: 8px;
-            background-position: center center;
-            background-repeat: repeat-y;
-            background-size: cover;
-        }
-
-        .switches {
-            text-align: center;
-            margin-bottom: 20px;
-
-            a {
-                font-weight: bold;
-                font-size: 1.2rem;
-                display: inline-block;
-                text-decoration: none;
-                padding: 10px 15px;
-                margin: 0 5px;
-
-                &.active {
-                    color: $brand-dark;
-                    cursor: default;
-                }
-            }
-
-            &.loading {
-                display: none;
-            }
-        }
-    }
-
-    @media (min-width: $breakpoint2){
-
-        .showcase {
-            display: flex;
-            max-width: $breakpoint0;
-            margin: 0 auto;
-            justify-content: space-around;
-            padding: 0 30px;
-        }
-    }
-}
 
 .footer {
     background: $brand-dark;
