@@ -67,6 +67,18 @@ body {
         &.pink {
             background: url("../images/bg-header-pink.jpg") top center no-repeat;
         }
+
+        &.grey {
+            background: url("../images/bg-header-gray.jpg") top center no-repeat;
+        }
+
+        &.black {
+            background: url("../images/bg-header-black.jpg") top center no-repeat;
+        }
+
+        &.dark {
+            background: url("../images/bg-header-dark.jpg") top center no-repeat;
+        }
     }
 }
 

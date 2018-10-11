@@ -68,7 +68,13 @@ body {
       .header.green {
         background: url("../images/bg-header-green.jpg") top center no-repeat; }
       .header.pink {
-        background: url("../images/bg-header-pink.jpg") top center no-repeat; } }
+        background: url("../images/bg-header-pink.jpg") top center no-repeat; }
+      .header.grey {
+        background: url("../images/bg-header-gray.jpg") top center no-repeat; }
+      .header.black {
+        background: url("../images/bg-header-black.jpg") top center no-repeat; }
+      .header.dark {
+        background: url("../images/bg-header-dark.jpg") top center no-repeat; } }
 
 .navigation .container {
   padding: 0; }
