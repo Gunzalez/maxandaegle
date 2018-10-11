@@ -53,8 +53,6 @@ body {
   @media (min-width: 768px) {
     .header {
       height: 320px;
-      background-repeat: no-repeat;
-      background-position: top center;
       color: #ffffff; }
       .header .copy {
         padding: 0;
@@ -69,7 +67,7 @@ body {
         line-height: 100%;
         font-size: 80px; }
       .header.green {
-        background: url("/images/bg-header-green.jpg") top center; } }
+        background: url("images/bg-header-green.jpg") top center no-repeat; } }
 
 .navigation .nav {
   position: relative;

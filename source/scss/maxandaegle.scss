@@ -41,8 +41,6 @@ body {
     @media (min-width: $breakpoint2){
 
         height: 320px;
-        background-repeat: no-repeat;
-        background-position: top center;
         color: #ffffff;
 
         .copy {
@@ -64,7 +62,7 @@ body {
         }
 
         &.green {
-            background: url("/images/bg-header-green.jpg") top center;
+            background: url("images/bg-header-green.jpg") top center no-repeat;
         }
     }
 }
