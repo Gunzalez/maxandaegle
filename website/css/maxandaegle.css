@@ -26,7 +26,7 @@ h2 {
 
 body {
   background: #ffffff;
-  color: #2d2d2d; }
+  color: #000104; }
 
 .header {
   height: 110px;
@@ -66,7 +66,9 @@ body {
         line-height: 100%;
         font-size: 80px; }
       .header.green {
-        background: url("../images/bg-header-green.jpg") top center no-repeat; } }
+        background: url("../images/bg-header-green.jpg") top center no-repeat; }
+      .header.pink {
+        background: url("../images/bg-header-pink.jpg") top center no-repeat; } }
 
 .navigation .container {
   padding: 0; }
@@ -91,7 +93,7 @@ body {
   .navigation .menu-container a {
     padding: 12px 18px 11px 18px;
     display: block;
-    color: #2d2d2d;
+    color: #3a3c44;
     transition: background-color 0.33s;
     text-decoration: none; }
     .navigation .menu-container a:hover {

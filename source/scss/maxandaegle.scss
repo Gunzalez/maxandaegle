@@ -3,7 +3,7 @@
 
 body {
     background: #ffffff;
-    color: $brand-dark;
+    color: $brand-pitch-black;
 }
 
 .header {
@@ -63,6 +63,10 @@ body {
         &.green {
             background: url("../images/bg-header-green.jpg") top center no-repeat;
         }
+
+        &.pink {
+            background: url("../images/bg-header-pink.jpg") top center no-repeat;
+        }
     }
 }
 
@@ -99,7 +103,7 @@ body {
         a {
             padding: 12px 18px 11px 18px;
             display: block;
-            color: $brand-dark;
+            color: $brand-gray-darker;
             transition: background-color 0.33s;
             text-decoration: none;
 
