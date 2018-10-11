@@ -1,12 +1,5 @@
-# Modern Kode Ltd
+# Max & Aegle
 
-Single page website, nothing more.
+Set of responsive templates - (HTML, CSS and some JS)
 
-HTML, CSS and some JS
-
-At $ prompt -
-=======================
-Git Clone
-npm install
-gulp
 
