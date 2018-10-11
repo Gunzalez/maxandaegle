@@ -44,7 +44,7 @@ body {
     font-size: 40px;
     padding-right: 80px; }
   .header.green {
-    background: #c2d100; }
+    background: #cbdb2a; }
   .header .nav-trigger {
     position: absolute;
     top: 20px;
@@ -81,14 +81,18 @@ body {
     padding: 0;
     margin: 0;
     list-style: none;
-    background: #eff3f4;
+    background: #b1c0c9;
     width: 100%; }
   .navigation .nav li {
-    border-bottom: 1px solid white; }
+    border-bottom: 1px solid #eff3f4; }
   .navigation .nav a {
     padding: 12px 18px 11px 18px;
     display: block;
-    color: #2d2d2d; }
+    color: #2d2d2d;
+    transition: background-color 0.33s;
+    text-decoration: none; }
+    .navigation .nav a:hover {
+      background: #cfd8de; }
 
 @media (max-width: 992px) {
   .navigation .container {
@@ -105,7 +109,7 @@ body {
     z-index: 10; } }
 
 .imaged {
-  background: url("../images/bg-about-us-copy.jpg") top center no-repeat #bfcad0;
+  background: url("../images/bg-about-us-copy.jpg") top center no-repeat #b1c0c9;
   padding-top: 750px;
   min-height: 1040px; }
   @media (min-width: 992px) {
@@ -115,10 +119,8 @@ body {
 .hexagons {
   background: url("../images/bg-hexagons-section.jpg") top center no-repeat #d3d700; }
   .hexagons .placeholder {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    height: 600px;
+    text-align: center;
+    height: 900px;
     padding-top: 200px;
     background: black;
     color: white; }
@@ -127,3 +129,7 @@ body {
 
 .addendum {
   background: url("../images/bg-addendum.jpg") center -60px no-repeat; }
+
+.footer {
+  background: #3a3c44;
+  height: 236px; }
