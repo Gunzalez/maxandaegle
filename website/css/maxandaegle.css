@@ -67,7 +67,7 @@ body {
         line-height: 100%;
         font-size: 80px; }
       .header.green {
-        background: url("images/bg-header-green.jpg") top center no-repeat; } }
+        background: url("../images/bg-header-green.jpg") top center no-repeat; } }
 
 .navigation .nav {
   position: relative;
