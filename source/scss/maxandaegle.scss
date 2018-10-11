@@ -39,7 +39,6 @@ body {
     }
 
     @media (min-width: $breakpoint2){
-
         height: 320px;
         color: #ffffff;
 
@@ -135,23 +134,31 @@ body {
     min-height: 1040px;
 
     @media (min-width: $breakpoint3){
-
         padding-top: 800px;
     }
 }
 
-
 .hexagons {
-    background: url("../images/bg-hexagons-section.jpg") top center no-repeat $brand-green-light;
-    margin-bottom: -40px;
+    background: url("../images/bg-hexagons-section.jpg") top center no-repeat $brand-yellow-strong;
 
     .placeholder {
-        text-align: center;
-        margin: 0 auto;
-        height: 400px;
+        //flex-direction: column;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        height: 600px;
+        padding-top: 200px;
         background: black;
         color: white;
     }
+
+    .skip {
+        background: url("../images/bg-closes-yellow.jpg") center bottom no-repeat;
+    }
+}
+
+.addendum {
+    background: url("../images/bg-addendum.jpg") center -60px no-repeat;
 }
 
 

@@ -113,11 +113,17 @@ body {
       padding-top: 800px; } }
 
 .hexagons {
-  background: url("../images/bg-hexagons-section.jpg") top center no-repeat #c3d800;
-  margin-bottom: -40px; }
+  background: url("../images/bg-hexagons-section.jpg") top center no-repeat #d3d700; }
   .hexagons .placeholder {
-    text-align: center;
-    margin: 0 auto;
-    height: 400px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    height: 600px;
+    padding-top: 200px;
     background: black;
     color: white; }
+  .hexagons .skip {
+    background: url("../images/bg-closes-yellow.jpg") center bottom no-repeat; }
+
+.addendum {
+  background: url("../images/bg-addendum.jpg") center -60px no-repeat; }
