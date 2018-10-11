@@ -50,7 +50,7 @@ body {
     position: absolute;
     top: 20px;
     right: 20px; }
-  @media (min-width: 992px) {
+  @media (min-width: 768px) {
     .header {
       height: 320px;
       background-repeat: no-repeat;
@@ -69,7 +69,7 @@ body {
         line-height: 100%;
         font-size: 80px; }
       .header.green {
-        background-image: url("/images/bg-header-green.jpg"); } }
+        background: url("/images/bg-header-green.jpg") top center; } }
 
 .navigation .nav {
   position: relative;
@@ -79,19 +79,30 @@ body {
   .navigation .nav .menu {
     width: 100%;
     position: absolute;
-    bottom: 0;
-    background: #c3d800; }
+    bottom: 0; }
   .navigation .nav ul {
     padding: 0;
     margin: 0;
-    list-style: none; }
+    list-style: none;
+    background: #eff3f4;
+    width: 100%; }
   .navigation .nav li {
     border-bottom: 1px solid white; }
   .navigation .nav a {
     padding: 12px 18px 11px 18px;
     display: block;
-    color: white; }
+    color: #2d2d2d; }
 
 @media (max-width: 992px) {
   .navigation .container {
     padding: 0; } }
+
+@media (min-width: 768px) {
+  .navigation .nav .menu ul {
+    float: right;
+    width: 300px; }
+  .navigation .desktop {
+    position: relative;
+    height: 0;
+    overflow: visible;
+    z-index: 10; } }
