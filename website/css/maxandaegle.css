@@ -116,8 +116,8 @@ body {
     background: #000104; }
   .header.dark {
     background: #3a3c44; }
-  .header.green {
-    background: #cbdb2a; }
+  .header.grey {
+    background: #b1c0c9; }
   .header.green {
     background: #cbdb2a; }
   .header .nav-trigger {
@@ -167,10 +167,12 @@ body {
     padding: 0;
     margin: 0;
     list-style: none;
-    background: #b1c0c9;
+    background: #eff3f4;
     width: 100%; }
   .navigation .menu-container li {
-    border-bottom: 1px solid #eff3f4; }
+    border-bottom: 1px solid #b1c0c9; }
+    .navigation .menu-container li:nth-last-child(1) {
+      border-bottom: none; }
   .navigation .menu-container a {
     padding: 12px 18px 11px 18px;
     display: block;
@@ -209,6 +211,15 @@ body {
     color: white; }
   .hexagons .skip {
     background: url("../images/bg-closes-yellow.jpg") center bottom no-repeat; }
+
+.gallery {
+  padding-bottom: 60px; }
+  .gallery .placeholder {
+    text-align: center;
+    min-height: 1300px;
+    padding-top: 200px;
+    background: black;
+    color: white; }
 
 .hexagons-wide {
   padding-bottom: 60px; }

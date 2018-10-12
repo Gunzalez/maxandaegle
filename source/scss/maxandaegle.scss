@@ -40,8 +40,8 @@ body {
         background: $brand-gray-darker;
     }
 
-    &.green {
-        background: $brand-green-dark;
+    &.grey {
+        background: $brand-gray-dark;
     }
 
     &.green {
@@ -120,12 +120,16 @@ body {
             padding: 0;
             margin: 0;
             list-style: none;
-            background: $brand-gray-dark;
+            background: $brand-gray-light;
             width: 100%;
         }
 
         li {
-            border-bottom: 1px solid $brand-gray-light;
+            border-bottom: 1px solid $brand-gray-dark;
+
+            &:nth-last-child(1){
+                border-bottom: none;
+            }
         }
 
         a {
@@ -187,6 +191,18 @@ body {
 
     .skip {
         background: url("../images/bg-closes-yellow.jpg") center bottom no-repeat;
+    }
+}
+
+.gallery {
+    padding-bottom: 60px;
+
+    .placeholder {
+        text-align: center;
+        min-height: 1300px;
+        padding-top: 200px;
+        background: black;
+        color: white;
     }
 }
 
