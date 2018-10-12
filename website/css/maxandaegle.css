@@ -46,11 +46,11 @@ p {
   margin: 0; }
 
 form {
-  margin: 45px 0; }
-  form label {
+  margin: 45px 0 0 0; }
+  form .find-for-mobile {
     display: none; }
   @media (min-width: 992px) {
-    form label {
+    form .find-for-mobile {
       display: block; }
     form .form-group textarea::placeholder,
     form .form-group input::placeholder {
@@ -83,9 +83,11 @@ textarea {
   resize: none;
   padding: 20px 18px; }
 
-@media (min-width: 992px) {
-  .form-check input + label {
-    padding-right: 80px; } }
+.form-check {
+  margin-bottom: 1.5rem; }
+  @media (min-width: 992px) {
+    .form-check input + label {
+      padding-right: 80px; } }
 
 body {
   background: #ffffff;
@@ -205,6 +207,15 @@ body {
     color: white; }
   .hexagons .skip {
     background: url("../images/bg-closes-yellow.jpg") center bottom no-repeat; }
+
+.hexagons-wide {
+  padding-bottom: 60px; }
+  .hexagons-wide .placeholder {
+    text-align: center;
+    padding-top: 200px;
+    min-height: 600px;
+    background: black;
+    color: white; }
 
 .footer.footer-top {
   background: url("../images/bg-footer-top.jpg") center -60px no-repeat; }
