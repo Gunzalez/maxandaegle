@@ -46,6 +46,14 @@ h3 {
     padding-top: 5px;
 }
 
+
+h4 {
+    font-size: 20px;
+    padding-bottom: 12px;
+    padding-top: 5px;
+    font-weight: bold;
+}
+
 p {
     padding-bottom: 12px;
     margin: 0;
@@ -72,21 +80,53 @@ form {
             }
         }
     }
+
+    .btn-MandA {
+        padding: 10px 18px;
+        color: $brand-gray-darker;
+        background: $brand-green-dark;
+        border-color: $brand-green-dark;
+        border-radius: 0;
+        text-transform: uppercase;
+        font-size: 20px;
+
+        &:hover {
+            background: $brand-green-light;
+            border-color: $brand-green-light;
+        }
+    }
+
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
 }
 
-//select,
-//input[type="text"],
-//input[type="email"],
-//input[type="password"],
-//textarea {
-//    -webkit-appearance: none;
-//    -moz-appearance: none;
-//    appearance: none;
-//    outline: none;
-//    border-radius: 0;
-//    background: #ffffff;
-//    resize: none;
-//}
+select,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border-radius: 0;
+    background: #ffffff;
+    resize: none;
+    padding: 20px 18px;
+}
+
+.form-check {
+
+    @media (min-width: $breakpoint3){
+
+        input + label {
+            padding-right: 80px;
+        }
+    }
+}
+
+
 
 
 //
