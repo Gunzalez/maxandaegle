@@ -263,6 +263,12 @@ body {
             height: 34px;
             line-height: 34px;
             color: $brand-gray-darker;
+            transition: all 0.33s;
+
+            &:hover {
+                color: white;
+                background-image: url("../images/bg-footer-nav-links-green.svg");
+            }
         }
     }
 
