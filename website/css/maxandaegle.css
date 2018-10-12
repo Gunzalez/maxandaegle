@@ -47,10 +47,10 @@ p {
 
 form {
   margin: 30px 0; }
-  form .find-for-mobile {
+  form .has-placeholder {
     display: none; }
   @media (min-width: 992px) {
-    form .find-for-mobile {
+    form .has-placeholder {
       display: block; }
     form .form-group textarea::placeholder,
     form .form-group input::placeholder {
@@ -112,8 +112,8 @@ body {
     padding-right: 80px; }
   .header.pink {
     background: #e57ab1; }
-  .header.green {
-    background: #cbdb2a; }
+  .header.black {
+    background: #000104; }
   .header.green {
     background: #cbdb2a; }
   .header.green {

@@ -63,13 +63,13 @@ p {
 form {
     margin: 30px 0;
 
-    .find-for-mobile {
+    .has-placeholder {
         display: none;
     }
 
     @media (min-width: $breakpoint3){
 
-        .find-for-mobile {
+        .has-placeholder {
             display: block;
         }
 
@@ -122,8 +122,6 @@ form {
             padding: 20px 18px;
         }
     }
-
-
 }
 
 .form-check {
