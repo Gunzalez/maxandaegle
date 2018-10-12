@@ -2,6 +2,8 @@
 Stuff to do
 =============================
 * See about Select form control
+* Extra pages, such and Ts and Cs
+* form validation
 
 
 
