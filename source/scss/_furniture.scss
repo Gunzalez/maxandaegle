@@ -63,13 +63,13 @@ p {
 form {
     margin: 45px 0;
 
-    label {
+    .find-for-mobile {
         display: none;
     }
 
     @media (min-width: $breakpoint3){
 
-        label {
+        .find-for-mobile {
             display: block;
         }
 
