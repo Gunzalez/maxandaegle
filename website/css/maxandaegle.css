@@ -114,8 +114,8 @@ body {
     background: #e57ab1; }
   .header.black {
     background: #000104; }
-  .header.green {
-    background: #cbdb2a; }
+  .header.dark {
+    background: #3a3c44; }
   .header.green {
     background: #cbdb2a; }
   .header.green {
@@ -217,6 +217,16 @@ body {
     padding-top: 200px;
     min-height: 600px;
     background: black;
+    color: white; }
+
+.blockquote {
+  background: url("../images/bg-blockquote.jpg") top center no-repeat #b1c0c9;
+  min-height: 412px; }
+  .blockquote .copy {
+    text-transform: uppercase;
+    font-size: 28px;
+    line-height: 160%;
+    font-style: italic;
     color: white; }
 
 .footer.footer-top {

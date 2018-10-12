@@ -36,8 +36,8 @@ body {
         background: $brand-pitch-black;
     }
 
-    &.green {
-        background: $brand-green-dark;
+    &.dark {
+        background: $brand-gray-darker;
     }
 
     &.green {
@@ -198,6 +198,19 @@ body {
         padding-top: 200px;
         min-height: 600px;
         background: black;
+        color: white;
+    }
+}
+
+.blockquote {
+    background: url("../images/bg-blockquote.jpg") top center no-repeat $brand-gray-dark;
+    min-height: 412px;
+
+    .copy {
+        text-transform: uppercase;
+        font-size: 28px;
+        line-height: 160%;
+        font-style: italic;
         color: white;
     }
 }
