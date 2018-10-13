@@ -10,7 +10,26 @@
         }
     };
 
+    maxAndAegle.utils = {
+
+        isValidEmail: function (item) {
+            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test($(item).val());
+        },
+
+        isEmpty: function(item){
+            return $(item).val().length === 0;
+        },
+
+        setStateError: function (item) {
+            $(item).parents('.form-group').addClass('error');
+        }
+    };
+
     maxAndAegle.homepageLink = {
+
+        isTouchDevice: false,
+
         els: {
             link: $('.js-tilt')
         },
@@ -33,8 +52,8 @@
         },
 
         init: function () {
-            var isTouchDevice = 'ontouchstart' in document.documentElement;
-            if( !isTouchDevice ) {
+            maxAndAegle.homepageLink.isTouchDevice = 'ontouchstart' in document.documentElement;
+            if( !maxAndAegle.homepageLink.isTouchDevice ) {
                 maxAndAegle.homepageLink.tiltInit();
             }
         }
@@ -66,13 +85,54 @@
         }
     };
 
+    maxAndAegle.contact = {
+
+        isValid: true,
+
+        els: {
+            form: $('#contact-form'),
+            fields: []
+        },
+
+        init: function () {
+
+            maxAndAegle.contact.els.form.on('submit', function () {
+
+                maxAndAegle.contact.els.form.find('.error').removeClass('error');
+                maxAndAegle.contact.isValid = true;
+
+                maxAndAegle.contact.fields = maxAndAegle.contact.els.form.find('[required]');
+                maxAndAegle.contact.fields.each(function (index, item) {
+
+                    switch (item.type){
+                        case 'email':
+                            if(!maxAndAegle.utils.isValidEmail(item)){
+                                maxAndAegle.contact.isValid = false;
+                                maxAndAegle.utils.setStateError(item);
+                            }
+                            break;
+                        default:
+                            if(maxAndAegle.utils.isEmpty(item)){
+                                maxAndAegle.contact.isValid = false;
+                                maxAndAegle.utils.setStateError(item);
+                            }
+                    }
+
+                });
+
+                return maxAndAegle.contact.isValid
+            })
+        }
+    };
 
     // main init
     maxAndAegle.init = function () {
+
         // all init here
         maxAndAegle.environment.init();
         maxAndAegle.navigation.init();
         maxAndAegle.homepageLink.init();
+        maxAndAegle.contact.init();
     };
 
 
