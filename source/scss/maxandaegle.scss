@@ -48,10 +48,37 @@ body {
         background: $brand-green-dark;
     }
 
-    .nav-trigger {
+    .nav-triggers {
         position: absolute;
-        top: 20px;
+        top: -20px;
         right: 20px;
+        width: 240px;
+        height: 240px;
+    }
+
+    .home-link {
+        height: 180px;
+        width: 206px;
+        background-image: url("../images/svg-hexagon-white.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: block;
+        position: relative;
+
+        span {
+            display: block;
+            background-image: url("../images/svg-logo.svg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 68px;
+            height: 92px;
+            text-indent: -9000px;
+            position: absolute;
+            top: 50%;
+            margin-top: -46px;
+            left: 50%;
+            margin-left: -34px;
+        }
     }
 
     @media (min-width: $breakpoint2){
@@ -257,7 +284,7 @@ body {
         a {
             display: inline-block;
             text-align: center;
-            background-image: url("../images/bg-footer-nav-links.svg");
+            background-image: url("../images/svg-hexagon-white.svg");
             background-size: cover;
             width: 40px;
             height: 34px;
@@ -267,7 +294,7 @@ body {
 
             &:hover {
                 color: white;
-                background-image: url("../images/bg-footer-nav-links-green.svg");
+                background-image: url("../images/svg-hexagon-green.svg");
             }
         }
     }
