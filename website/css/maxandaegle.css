@@ -134,7 +134,9 @@ body {
     background-repeat: no-repeat;
     display: block;
     position: relative;
-    transform-style: preserve-3d; }
+    transform-style: preserve-3d;
+    overflow: hidden;
+    transition: background 0.33s; }
     .header .home-link span {
       display: block;
       background-image: url("../images/svg-logo.svg");
@@ -149,6 +151,10 @@ body {
       left: 50%;
       margin-left: -34px;
       transform: translateZ(20px); }
+    .header .home-link:hover {
+      background-image: url("../images/svg-hexagon-green-light.svg");
+      background-size: cover;
+      background-repeat: no-repeat; }
   @media (min-width: 768px) {
     .header {
       height: 320px;

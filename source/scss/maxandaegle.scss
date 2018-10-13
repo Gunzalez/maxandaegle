@@ -65,6 +65,8 @@ body {
         display: block;
         position: relative;
         transform-style: preserve-3d;
+        overflow: hidden;
+        transition: background 0.33s;
 
         span {
             display: block;
@@ -80,6 +82,12 @@ body {
             left: 50%;
             margin-left: -34px;
             transform: translateZ(20px);
+        }
+
+        &:hover {
+            background-image: url("../images/svg-hexagon-green-light.svg");
+            background-size: cover;
+            background-repeat: no-repeat;
         }
     }
 
