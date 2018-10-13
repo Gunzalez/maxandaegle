@@ -50,9 +50,9 @@ body {
 
     .nav-triggers {
         position: absolute;
-        top: -20px;
+        top: -120px;
         right: 20px;
-        width: 240px;
+        width: 260px;
         height: 240px;
     }
 
@@ -64,6 +64,7 @@ body {
         background-repeat: no-repeat;
         display: block;
         position: relative;
+        transform-style: preserve-3d;
 
         span {
             display: block;
@@ -78,6 +79,7 @@ body {
             margin-top: -46px;
             left: 50%;
             margin-left: -34px;
+            transform: translateZ(20px);
         }
     }
 

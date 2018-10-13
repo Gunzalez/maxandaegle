@@ -122,9 +122,9 @@ body {
     background: #cbdb2a; }
   .header .nav-triggers {
     position: absolute;
-    top: -20px;
+    top: -120px;
     right: 20px;
-    width: 240px;
+    width: 260px;
     height: 240px; }
   .header .home-link {
     height: 180px;
@@ -133,7 +133,8 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     display: block;
-    position: relative; }
+    position: relative;
+    transform-style: preserve-3d; }
     .header .home-link span {
       display: block;
       background-image: url("../images/svg-logo.svg");
@@ -146,7 +147,8 @@ body {
       top: 50%;
       margin-top: -46px;
       left: 50%;
-      margin-left: -34px; }
+      margin-left: -34px;
+      transform: translateZ(20px); }
   @media (min-width: 768px) {
     .header {
       height: 320px;
