@@ -161,6 +161,16 @@ body {
         }
     }
 
+    &.pink {
+
+        .nav-triggers {
+
+            .nav-link {
+                background-image: url("../images/svg-hexagon-dark.svg");
+            }
+        }
+    }
+
     @media (min-width: $breakpoint2){
         height: 320px;
         color: #ffffff;

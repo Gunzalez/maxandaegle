@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
           integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
+    <link href="css/hamburgers.min.css" rel="stylesheet">
     <link href="css/maxandaegle.css" rel="stylesheet">
 
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
@@ -32,9 +33,21 @@
                         <div class="copy">
                             <p class="sub-title">Membership</p>
                             <h1 class="title">Join Us</h1>
-                            <div class="nav-trigger">
-                                <a href="#" id="nav-trigger-link">Menu</a>
+
+                            <div class="nav-triggers">
+                                <a href="index.html" class="home-link js-tilt">
+                                    <img src="images/svg-logo.svg" alt="logo" class="logo" />
+                                </a>
+                                <a href="#" class="nav-link js-tilt" id="nav-trigger-link">
+                                    <span class="visually-hidden">Menu</span>
+                                    <div class="hamburger hamburger--squeeze" aria-hidden="true">
+                                        <div class="hamburger-box">
+                                            <div class="hamburger-inner"></div>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -230,6 +243,7 @@
     </div>
 
     <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/tilt.jquery.min.js"></script>
     <script src="js/maxAndAegle.js"></script>
 
 </body>
