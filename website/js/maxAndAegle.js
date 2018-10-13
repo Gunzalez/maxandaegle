@@ -6,20 +6,16 @@
 
     maxAndAegle.environment = {
         init: function (){
-
             console.log('Take a break!')
-
-
         }
     };
-
 
     maxAndAegle.homepageLink = {
         els: {
             link: $('.js-tilt')
         },
 
-        init: function () {
+        tiltInit: function(){
             if(maxAndAegle.homepageLink.els.link.length){
                 maxAndAegle.homepageLink.els.link.tilt({
                     // maxTilt:        20,
@@ -33,6 +29,13 @@
                     // glare:          false,  // Enables glare effect
                     // maxGlare:       1       // From 0 - 1.
                 })
+            }
+        },
+
+        init: function () {
+            var isTouchDevice = 'ontouchstart' in document.documentElement;
+            if( !isTouchDevice ) {
+                maxAndAegle.homepageLink.tiltInit();
             }
         }
     };

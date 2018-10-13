@@ -94,7 +94,6 @@ body {
 
         @media (min-width: $breakpoint2){
 
-            position: absolute;
             top: -120px;
             right: 20px;
             width: 260px;
@@ -112,8 +111,7 @@ body {
                 overflow: hidden;
                 transition: background 0.33s;
 
-                span {
-                    display: block;
+                .logo {
                     width: 68px;
                     height: 92px;
                     position: absolute;
@@ -133,7 +131,6 @@ body {
 
             .nav-link {
                 display: block;
-                background-image: url("../images/svg-hexagon-pink.svg");
                 background-size: cover;
                 background-repeat: no-repeat;
                 color: #ffffff;
@@ -141,8 +138,25 @@ body {
                 height: 94px;
                 float: right;
                 margin-top: -40px;
-                margin-right: 40px;
-                z-index: 11;
+                margin-right: 20px;
+                opacity: 0.5;
+
+                padding: 0;
+                position: relative;
+
+                .hamburger {
+                    margin: 35px 34px;
+                    padding: 0;
+
+                    .hamburger-box {
+                        transform: scale(1.2);
+                    }
+                }
+
+                &:hover {
+                    transition: opacity 0.33s;
+                    opacity: 1;
+                }
             }
         }
     }

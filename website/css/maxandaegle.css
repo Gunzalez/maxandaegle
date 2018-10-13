@@ -169,7 +169,6 @@ body {
           background-color: #ffffff; }
     @media (min-width: 768px) {
       .header .nav-triggers {
-        position: absolute;
         top: -120px;
         right: 20px;
         width: 260px;
@@ -185,8 +184,7 @@ body {
           transform-style: preserve-3d;
           overflow: hidden;
           transition: background 0.33s; }
-          .header .nav-triggers .home-link span {
-            display: block;
+          .header .nav-triggers .home-link .logo {
             width: 68px;
             height: 92px;
             position: absolute;
@@ -201,7 +199,6 @@ body {
             background-repeat: no-repeat; }
         .header .nav-triggers .nav-link {
           display: block;
-          background-image: url("../images/svg-hexagon-pink.svg");
           background-size: cover;
           background-repeat: no-repeat;
           color: #ffffff;
@@ -209,8 +206,18 @@ body {
           height: 94px;
           float: right;
           margin-top: -40px;
-          margin-right: 40px;
-          z-index: 11; } }
+          margin-right: 20px;
+          opacity: 0.5;
+          padding: 0;
+          position: relative; }
+          .header .nav-triggers .nav-link .hamburger {
+            margin: 35px 34px;
+            padding: 0; }
+            .header .nav-triggers .nav-link .hamburger .hamburger-box {
+              transform: scale(1.2); }
+          .header .nav-triggers .nav-link:hover {
+            transition: opacity 0.33s;
+            opacity: 1; } }
   @media (min-width: 768px) {
     .header {
       height: 320px;
