@@ -91,6 +91,20 @@ body {
         }
     }
 
+    .nav-link {
+        display: block;
+        background-image: url("../images/svg-hexagon-pink.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: #ffffff;
+        width: 108px;
+        height: 94px;
+        float: right;
+        margin-top: -40px;
+        margin-right: 40px;
+        z-index: 11;
+    }
+
     @media (min-width: $breakpoint2){
         height: 320px;
         color: #ffffff;

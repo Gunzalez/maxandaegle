@@ -91,6 +91,16 @@ form {
     .form-check input + label {
       padding-right: 80px; } }
 
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0; }
+
 body {
   background: #ffffff;
   color: #000104; }
@@ -155,6 +165,18 @@ body {
       background-image: url("../images/svg-hexagon-green-light.svg");
       background-size: cover;
       background-repeat: no-repeat; }
+  .header .nav-link {
+    display: block;
+    background-image: url("../images/svg-hexagon-pink.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    width: 108px;
+    height: 94px;
+    float: right;
+    margin-top: -40px;
+    margin-right: 40px;
+    z-index: 11; }
   @media (min-width: 768px) {
     .header {
       height: 320px;
