@@ -54,6 +54,7 @@
         init: function () {
             maxAndAegle.homepageLink.isTouchDevice = 'ontouchstart' in document.documentElement;
             if( !maxAndAegle.homepageLink.isTouchDevice ) {
+                $('html').addClass('hover');
                 maxAndAegle.homepageLink.tiltInit();
             }
         }
