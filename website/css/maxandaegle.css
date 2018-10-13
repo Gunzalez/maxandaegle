@@ -23,7 +23,10 @@ h1, h2, h3, h4, h5 {
   margin: 0; }
 
 h1 {
-  font-size: 45px; }
+  font-size: 26px; }
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 45px; } }
 
 h2 {
   font-size: 30px;
@@ -44,6 +47,9 @@ h4 {
 p {
   padding-bottom: 12px;
   margin: 0; }
+  p.sub-title {
+    font-size: 20px;
+    line-height: 20px; }
 
 form {
   margin: 30px 0; }
@@ -101,25 +107,26 @@ form {
   padding: 0;
   border: 0; }
 
+.hamburger.is-active:hover,
+.hamburger:hover {
+  opacity: 1.0; }
+
 body {
   background: #ffffff;
   color: #000104; }
 
 .header {
-  height: 110px;
+  height: 100px;
   color: #ffffff; }
   .header .sub-title {
     text-transform: uppercase;
     margin: 0;
-    padding-bottom: 15px;
-    font-size: 25px;
-    line-height: 20px; }
+    padding-bottom: 15px; }
   .header .copy {
     padding: 15px 0 0 0; }
   .header .title {
     line-height: 100%;
-    font-size: 40px;
-    padding-right: 80px; }
+    margin-top: 5px; }
   .header.pink {
     background: #e57ab1; }
   .header.black {
@@ -132,51 +139,78 @@ body {
     background: #cbdb2a; }
   .header .nav-triggers {
     position: absolute;
-    top: -120px;
-    right: 20px;
-    width: 260px;
-    height: 240px; }
-  .header .home-link {
-    height: 180px;
-    width: 206px;
-    background-image: url("../images/svg-hexagon-white.svg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: block;
-    position: relative;
-    transform-style: preserve-3d;
-    overflow: hidden;
-    transition: background 0.33s; }
-    .header .home-link span {
-      display: block;
-      background-image: url("../images/svg-logo.svg");
+    top: 26px;
+    right: 0; }
+    .header .nav-triggers .home-link {
+      display: inline-block;
+      float: left; }
+      .header .nav-triggers .home-link .logo {
+        display: inline-block;
+        height: 56px; }
+    .header .nav-triggers .nav-link {
+      display: inline-block;
+      margin: 0 0 0 15px;
+      padding: 0;
+      float: left;
+      position: relative;
+      background-image: url("../images/svg-hexagon-pink.svg");
       background-size: cover;
       background-repeat: no-repeat;
-      width: 68px;
-      height: 92px;
-      text-indent: -9000px;
-      position: absolute;
-      top: 50%;
-      margin-top: -46px;
-      left: 50%;
-      margin-left: -34px;
-      transform: translateZ(20px); }
-    .header .home-link:hover {
-      background-image: url("../images/svg-hexagon-green-light.svg");
-      background-size: cover;
-      background-repeat: no-repeat; }
-  .header .nav-link {
-    display: block;
-    background-image: url("../images/svg-hexagon-pink.svg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: #ffffff;
-    width: 108px;
-    height: 94px;
-    float: right;
-    margin-top: -40px;
-    margin-right: 40px;
-    z-index: 11; }
+      width: 58px;
+      height: 50px; }
+      .header .nav-triggers .nav-link .hamburger {
+        margin: 12px 9px;
+        padding: 0; }
+        .header .nav-triggers .nav-link .hamburger .hamburger-box {
+          transform: scale(0.6); }
+        .header .nav-triggers .nav-link .hamburger .hamburger-inner,
+        .header .nav-triggers .nav-link .hamburger .hamburger-inner:after,
+        .header .nav-triggers .nav-link .hamburger .hamburger-inner:before {
+          background-color: #ffffff; }
+    @media (min-width: 768px) {
+      .header .nav-triggers {
+        position: absolute;
+        top: -120px;
+        right: 20px;
+        width: 260px;
+        height: 240px; }
+        .header .nav-triggers .home-link {
+          height: 180px;
+          width: 206px;
+          background-image: url("../images/svg-hexagon-white.svg");
+          background-size: cover;
+          background-repeat: no-repeat;
+          display: block;
+          position: relative;
+          transform-style: preserve-3d;
+          overflow: hidden;
+          transition: background 0.33s; }
+          .header .nav-triggers .home-link span {
+            display: block;
+            width: 68px;
+            height: 92px;
+            position: absolute;
+            top: 50%;
+            margin-top: -46px;
+            left: 50%;
+            margin-left: -34px;
+            transform: translateZ(20px); }
+          .header .nav-triggers .home-link:hover {
+            background-image: url("../images/svg-hexagon-green-light.svg");
+            background-size: cover;
+            background-repeat: no-repeat; }
+        .header .nav-triggers .nav-link {
+          display: block;
+          background-image: url("../images/svg-hexagon-pink.svg");
+          background-size: cover;
+          background-repeat: no-repeat;
+          color: #ffffff;
+          width: 108px;
+          height: 94px;
+          float: right;
+          margin-top: -40px;
+          margin-right: 40px;
+          z-index: 11; } }
   @media (min-width: 768px) {
     .header {
       height: 320px;

@@ -31,7 +31,11 @@ h1, h2, h3, h4, h5 {
 }
 
 h1 {
-    font-size: 45px;
+    font-size: 26px;
+
+    @media (min-width: $breakpoint2){
+        font-size: 45px;
+    }
 }
 
 h2 {
@@ -57,6 +61,11 @@ h4 {
 p {
     padding-bottom: 12px;
     margin: 0;
+
+    &.sub-title {
+        font-size: 20px;
+        line-height: 20px;
+    }
 }
 
 
@@ -144,7 +153,10 @@ form {
 }
 
 
-
+.hamburger.is-active:hover,
+.hamburger:hover {
+    opacity: 1.0;
+}
 
 //
 //

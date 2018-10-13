@@ -7,15 +7,13 @@ body {
 }
 
 .header {
-    height: 110px;
+    height: 100px;
     color: #ffffff;
 
     .sub-title {
         text-transform: uppercase;
         margin: 0;
         padding-bottom: 15px;
-        font-size: 25px;
-        line-height: 20px;
     }
 
     .copy {
@@ -24,8 +22,7 @@ body {
 
     .title {
         line-height: 100%;
-        font-size: 40px;
-        padding-right: 80px;
+        margin-top: 5px;
     }
 
     &.pink {
@@ -49,60 +46,105 @@ body {
     }
 
     .nav-triggers {
+        //background-color: red;
         position: absolute;
-        top: -120px;
-        right: 20px;
-        width: 260px;
-        height: 240px;
-    }
+        top: 26px;
+        right: 0;
 
-    .home-link {
-        height: 180px;
-        width: 206px;
-        background-image: url("../images/svg-hexagon-white.svg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        display: block;
-        position: relative;
-        transform-style: preserve-3d;
-        overflow: hidden;
-        transition: background 0.33s;
 
-        span {
-            display: block;
-            background-image: url("../images/svg-logo.svg");
+        .home-link {
+            display: inline-block;
+            float: left;
+
+            .logo {
+                display: inline-block;
+                height: 56px;
+            }
+        }
+
+        .nav-link {
+            display: inline-block;
+            margin: 0 0 0 15px;
+            padding: 0;
+            float: left;
+            position: relative;
+
+            background-image: url("../images/svg-hexagon-pink.svg");
             background-size: cover;
             background-repeat: no-repeat;
-            width: 68px;
-            height: 92px;
-            text-indent: -9000px;
+
+            width: 58px;
+            height: 50px;
+
+            .hamburger {
+                margin: 12px 9px;
+                padding: 0;
+
+                .hamburger-box {
+                    transform: scale(0.6);
+                }
+
+                .hamburger-inner,
+                .hamburger-inner:after,
+                .hamburger-inner:before {
+                    background-color: #ffffff;
+                }
+            }
+        }
+
+        @media (min-width: $breakpoint2){
+
             position: absolute;
-            top: 50%;
-            margin-top: -46px;
-            left: 50%;
-            margin-left: -34px;
-            transform: translateZ(20px);
-        }
+            top: -120px;
+            right: 20px;
+            width: 260px;
+            height: 240px;
 
-        &:hover {
-            background-image: url("../images/svg-hexagon-green-light.svg");
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
-    }
+            .home-link {
+                height: 180px;
+                width: 206px;
+                background-image: url("../images/svg-hexagon-white.svg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                display: block;
+                position: relative;
+                transform-style: preserve-3d;
+                overflow: hidden;
+                transition: background 0.33s;
 
-    .nav-link {
-        display: block;
-        background-image: url("../images/svg-hexagon-pink.svg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        color: #ffffff;
-        width: 108px;
-        height: 94px;
-        float: right;
-        margin-top: -40px;
-        margin-right: 40px;
-        z-index: 11;
+                span {
+                    display: block;
+                    width: 68px;
+                    height: 92px;
+                    position: absolute;
+                    top: 50%;
+                    margin-top: -46px;
+                    left: 50%;
+                    margin-left: -34px;
+                    transform: translateZ(20px);
+                }
+
+                &:hover {
+                    background-image: url("../images/svg-hexagon-green-light.svg");
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+            }
+
+            .nav-link {
+                display: block;
+                background-image: url("../images/svg-hexagon-pink.svg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                color: #ffffff;
+                width: 108px;
+                height: 94px;
+                float: right;
+                margin-top: -40px;
+                margin-right: 40px;
+                z-index: 11;
+            }
+        }
     }
 
     @media (min-width: $breakpoint2){
