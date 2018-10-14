@@ -1,5 +1,6 @@
 @import "colours";
 @import "furniture";
+@import "mixins";
 
 body {
     background: #ffffff;
@@ -46,7 +47,6 @@ body {
     }
 
     .nav-triggers {
-        //background-color: red;
         position: absolute;
         top: 26px;
         right: 0;
@@ -112,19 +112,12 @@ body {
                 top: 6px;
                 left: -12px;
                 z-index: 20;
-                -webkit-transition: 1s ease-in-out;
-                -moz-transition: 1s ease-in-out;
-                -o-transition: 1s ease-in-out;
-                transition: 1s ease-in-out;
 
                 &.hex1 {
                     left: -22px;
                     top: 75px;
                     z-index: 21;
-                    -webkit-transition: .33s ease-in-out;
-                    -moz-transition: .33s ease-in-out;
-                    -o-transition: .33s ease-in-out;
-                    transition: .33s ease-in-out;
+                    @include transition(.33s ease-in-out);
                     background-image: url("../images/svg-hexagon-green.svg");
                     opacity: 0.8;
                 }
@@ -135,22 +128,26 @@ body {
                     background-image: url("../images/svg-hexagon-grey.svg");
                     height: 80px;
                     width: 92px;
-                    -webkit-transition: .5s ease-in-out;
-                    -moz-transition: .5s ease-in-out;
-                    -o-transition: .5s ease-in-out;
-                    transition: .5s ease-in-out;
+                    opacity: 0.8;
+                    @include transition(.5s ease-in-out);
                 }
 
                 &.hex3 {
-                    top: 25px;
+                    top: 80px;
+                    right: -2px;
                     left: inherit;
-                    right: -12px;
+                    background-image: url("../images/svg-hexagon-dark.svg");
+                    opacity: 0.7;
+                    @include transition(.25s ease-in-out);
                 }
 
                 &.hex4 {
-                    top: 18px;
+                    top: 38px;
                     left: inherit;
-                    right: -6px;
+                    right: -14px;
+                    height: 60px;
+                    width: 69px;
+                    @include transition(.5s ease-in-out);
                 }
             }
 
@@ -178,9 +175,10 @@ body {
                 }
 
                 &:hover {
-                    background-image: url("../images/svg-hexagon-green-light.svg");
-                    background-size: cover;
-                    background-repeat: no-repeat;
+                    //background-image: url("../images/svg-hexagon-green-light.svg");
+                    //background-size: cover;
+                    //background-repeat: no-repeat;
+                    z-index: 30;
                 }
             }
 
@@ -289,37 +287,29 @@ body {
 
     .nav-triggers {
 
-        &:hover {
+        &.hover {
 
             .hex1 {
-                //-webkit-transform: translate(3em,0);
-                //-moz-transform: translate(3em,0);
-                //-o-transform: translate(3em,0);
-                //-ms-transform: translate(3em,0);
-                transform: translate(-2em, 1em);
+                transform: translate(-20px, 11px);
+                opacity: 1;
             }
 
             .hex2 {
-                transform: translate(-20px, 5px);
+                transform: translate(-31px, -2px);
+                opacity: 1;
             }
 
-            //&.hex3 {
-            //    top: 25px;
-            //    left: inherit;
-            //    right: -12px;
-            //}
-            //
-            //&.hex4 {
-            //    top: 18px;
-            //    left: inherit;
-            //    right: -6px;
-            //}
+            .hex3 {
+                transform: translate(15px, 15px);
+                opacity: 1;
+            }
+
+            .hex4 {
+                transform: translate(12px, -10px);
+                opacity: 1;
+            }
         }
-
     }
-
-
-
 }
 
 .navigation {

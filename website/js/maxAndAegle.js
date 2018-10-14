@@ -67,10 +67,13 @@
         els: {
             trigger: $('#nav-trigger-link'),
             navigation: $('#nav'),
-            menu: $('#menu')
+            menu: $('#menu'),
+            homeLink: $('.home-link')
         },
 
         init: function () {
+
+            // opens/shuts main navigation
             this.els.trigger.on('click', function (ev) {
                 ev.preventDefault();
                 if(maxAndAegle.navigation.status !== 'open'){
@@ -82,7 +85,16 @@
                     maxAndAegle.navigation.status = '';
                     $(this).find('.hamburger').removeClass('is-active');
                 }
-            })
+            });
+
+            // home link effects
+            this.els.homeLink.on('mouseover', function () {
+                maxAndAegle.navigation.els.homeLink.parents('.nav-triggers').addClass('hover');
+            }).on('mouseout', function () {
+                maxAndAegle.navigation.els.homeLink.parents('.nav-triggers').removeClass('hover');
+            });
+
+            console.log('Finer');
         }
     };
 
