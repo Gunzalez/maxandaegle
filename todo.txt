@@ -1,7 +1,6 @@
 
 Stuff to do
 =============================
-* See about Select form control
 * Extra pages, such and Ts and Cs
 * form validation
 
@@ -10,7 +9,7 @@ Stuff to do
 
 DONE
 =============================
-
+* See about Select form control
 
 
 
@@ -31,3 +30,4 @@ Wednesday        04
 Thursday         17
 Friday           06
 Saturday         12
+Sunday           03
