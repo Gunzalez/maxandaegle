@@ -128,11 +128,19 @@ form {
             -webkit-appearance: none;
             -moz-appearance: none;
             appearance: none;
+            height: inherit;
             outline: none;
             border-radius: 0;
             background: #ffffff;
             resize: none;
-            padding: 20px 18px;
+            padding: 8px 10px 8px 12px;
+        }
+    }
+
+    select {
+        &.form-control {
+            background: url("../images/bg-select.png") right center no-repeat;
+            padding-right: 30px;
         }
     }
 }
