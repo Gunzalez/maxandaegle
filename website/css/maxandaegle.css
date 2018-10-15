@@ -46,7 +46,11 @@ h4 {
 
 p {
   padding-bottom: 12px;
-  margin: 0; }
+  margin: 0;
+  font-size: 16px; }
+  @media (min-width: 768px) {
+    p {
+      font-size: 18px; } }
   p.sub-title {
     font-size: 20px;
     line-height: 20px; }
@@ -367,7 +371,7 @@ body {
     text-decoration: none; }
     .navigation .menu-container a:hover {
       background: white;
-      color: #000104; }
+      color: #e57ab1; }
 
 @media (min-width: 768px) {
   .navigation .menu-container .menu-list ul {

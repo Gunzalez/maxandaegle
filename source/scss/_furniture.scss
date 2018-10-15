@@ -61,6 +61,11 @@ h4 {
 p {
     padding-bottom: 12px;
     margin: 0;
+    font-size: 16px;
+
+    @media (min-width: $breakpoint2){
+        font-size: 18px;
+    }
 
     &.sub-title {
         font-size: 20px;
