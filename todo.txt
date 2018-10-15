@@ -2,16 +2,18 @@
 Stuff to do
 =============================
 * form validation
-* add image to Ts & Cs page
-* send Github link to Dan
 * Discus exit strategy
 * Overlay carousel
+
+
 
 
 DONE
 =============================
 * See about Select form control
 * Extra pages, such and Ts and Cs
+* send Github link to Dan
+* add image to Ts & Cs page
 
 
 
@@ -33,3 +35,8 @@ Thursday         17
 Friday           06
 Saturday         12
 Sunday           03
+Monday           01
+
+
+Fonts Business   05
+
