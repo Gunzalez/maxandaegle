@@ -1,15 +1,17 @@
 
 Stuff to do
 =============================
-* Extra pages, such and Ts and Cs
 * form validation
-
-
+* add image to Ts & Cs page
+* send Github link to Dan
+* Discus exit strategy
+* Overlay carousel
 
 
 DONE
 =============================
 * See about Select form control
+* Extra pages, such and Ts and Cs
 
 
 

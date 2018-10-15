@@ -139,7 +139,10 @@ body {
 
 .header {
   height: 100px;
-  color: #ffffff; }
+  color: #ffffff;
+  -webkit-box-shadow: 0 0 14px 1px rgba(0, 0, 0, 0.45);
+  -moz-box-shadow: 0 0 14px 1px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 0 14px 1px rgba(0, 0, 0, 0.45); }
   .header .sub-title {
     text-transform: uppercase;
     margin: 0;
@@ -288,7 +291,7 @@ body {
             padding: 0; }
             .header .nav-triggers .nav-link .hamburger .hamburger-box {
               transform: scale(1.2); }
-          .header .nav-triggers .nav-link:hover {
+          .header .nav-triggers .nav-link:hover, .header .nav-triggers .nav-link.hover {
             transition: opacity 0.33s;
             opacity: 1; } }
   .header.pink .nav-triggers .nav-link {
@@ -348,22 +351,26 @@ body {
     bottom: 0; }
   .navigation .menu-container ul {
     padding: 0;
-    margin: 0;
+    margin: 0 0 5px 0;
     list-style: none;
-    background: #eff3f4;
-    width: 100%; }
+    background: #f5f5f5;
+    width: 100%;
+    -webkit-box-shadow: 0 0 8px -2px rgba(0, 0, 0, 0.65);
+    -moz-box-shadow: 0 0 8px -2px rgba(0, 0, 0, 0.65);
+    box-shadow: 0 0 8px -2px rgba(0, 0, 0, 0.65); }
   .navigation .menu-container li {
-    border-bottom: 1px solid #b1c0c9; }
+    border-bottom: 1px solid #cccccc; }
     .navigation .menu-container li:nth-last-child(1) {
       border-bottom: none; }
   .navigation .menu-container a {
     padding: 12px 18px 11px 18px;
     display: block;
     color: #3a3c44;
-    transition: background-color 0.33s;
+    transition: background-color 0.25s;
     text-decoration: none; }
     .navigation .menu-container a:hover {
-      background: #cfd8de; }
+      background: white;
+      color: #000104; }
 
 @media (min-width: 768px) {
   .navigation .menu-container .menu-list ul {

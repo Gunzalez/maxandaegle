@@ -79,11 +79,11 @@
                 if(maxAndAegle.navigation.status !== 'open'){
                     maxAndAegle.navigation.els.navigation.height(maxAndAegle.navigation.els.menu.height());
                     maxAndAegle.navigation.status = 'open';
-                    $(this).find('.hamburger').addClass('is-active');
+                    $(this).addClass('hover').find('.hamburger').addClass('is-active');
                 } else {
                     maxAndAegle.navigation.els.navigation.height(0);
                     maxAndAegle.navigation.status = '';
-                    $(this).find('.hamburger').removeClass('is-active');
+                    $(this).removeClass('hover').find('.hamburger').removeClass('is-active');
                 }
             });
 
