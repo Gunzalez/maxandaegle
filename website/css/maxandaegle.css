@@ -495,7 +495,7 @@ body {
     list-style: none; }
   .footer-nav a {
     color: #c3d800;
-    padding: 1px 15px;
+    padding: 1px 17px 1px 14px;
     border-right: 1px solid #eff3f4; }
   .footer-nav li {
     display: inline; }
