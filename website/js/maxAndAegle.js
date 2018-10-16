@@ -6,7 +6,7 @@
 
     maxAndAegle.environment = {
         init: function (){
-            console.log('Take a break!')
+
         }
     };
 
@@ -62,39 +62,36 @@
 
     maxAndAegle.navigation = {
 
-        status: '',
-
         els: {
-            trigger: $('#nav-trigger-link'),
-            navigation: $('#nav'),
-            menu: $('#menu'),
-            homeLink: $('.home-link')
+            menu: $("#menu"),
+            button: $('#menu-trigger'),
+            api: null
         },
 
         init: function () {
 
-            // opens/shuts main navigation
-            this.els.trigger.on('click', function (ev) {
-                ev.preventDefault();
-                if(maxAndAegle.navigation.status !== 'open'){
-                    maxAndAegle.navigation.els.navigation.height(maxAndAegle.navigation.els.menu.height());
-                    maxAndAegle.navigation.status = 'open';
-                    $(this).addClass('hover').find('.hamburger').addClass('is-active');
-                } else {
-                    maxAndAegle.navigation.els.navigation.height(0);
-                    maxAndAegle.navigation.status = '';
-                    $(this).removeClass('hover').find('.hamburger').removeClass('is-active');
+            maxAndAegle.navigation.els.menu.mmenu({
+                "extensions": [
+                    "pageshadow",
+                    // "theme-dark",
+                    "pagedim",
+                    "effect-menu-slide",
+                    "effect-listitems-slide"
+                ],
+                "offCanvas": {
+                    "position": "right"
                 }
             });
 
-            // home link effects
-            this.els.homeLink.on('mouseover', function () {
-                maxAndAegle.navigation.els.homeLink.parents('.nav-triggers').addClass('hover');
-            }).on('mouseout', function () {
-                maxAndAegle.navigation.els.homeLink.parents('.nav-triggers').removeClass('hover');
+            maxAndAegle.navigation.els.api = maxAndAegle.navigation.els.menu.data( "mmenu" );
+
+            maxAndAegle.navigation.els.api.bind( "opened", function() {
+                maxAndAegle.navigation.els.button.find('.hamburger').addClass('is-active');
             });
 
-            console.log('Finer');
+            maxAndAegle.navigation.els.api.bind( "closed", function() {
+                maxAndAegle.navigation.els.button.find('.hamburger').removeClass('is-active');
+            });
         }
     };
 
@@ -130,7 +127,6 @@
                                 maxAndAegle.utils.setStateError(item);
                             }
                     }
-
                 });
 
                 return maxAndAegle.contact.isValid
