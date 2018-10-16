@@ -18,8 +18,17 @@
     <link href="css/hamburgers.min.css" rel="stylesheet">
     <link href="css/maxandaegle.css" rel="stylesheet">
 
+    <!-- Include jQuery.mmenu .css files -->
+    <link type="text/css" href="js/mmenu/jquery.mmenu.all.css" rel="stylesheet" />
+
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
 </head>
 <body>
@@ -42,7 +51,7 @@
                                 <a href="index.html" class="home-link js-tilt">
                                     <img src="images/svg-logo.svg" alt="logo" class="logo" />
                                 </a>
-                                <a href="#" class="nav-link js-tilt" id="nav-trigger-link">
+                                <a href="#menu" class="nav-link js-tilt" id="menu-trigger">
                                     <span class="visually-hidden">Menu</span>
                                     <div class="hamburger hamburger--squeeze" aria-hidden="true">
                                         <div class="hamburger-box">
@@ -132,8 +141,19 @@
         </div>
     </div>
 
+    <nav id="menu">
+        <ul>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="facilities.html">What's on offer</a></li>
+            <li><a href="gallery.html">Check us out</a></li>
+            <li><a href="membership.html">Join us</a></li>
+            <li><a href="contact.html">Get in touch</a></li>
+        </ul>
+    </nav>
+
     <script src="js/jquery-3.3.1.slim.min.js"></script>
     <script src="js/tilt.jquery.min.js"></script>
+    <script src="js/mmenu/jquery.mmenu.min.all.js"></script>
     <script src="js/maxAndAegle.js"></script>
 
 </body>

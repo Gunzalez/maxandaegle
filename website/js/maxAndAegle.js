@@ -103,9 +103,7 @@
 
             // home link effects
             this.els.homeLink.on('mouseover', function () {
-
                 maxAndAegle.navigation.els.homeLink.parents('.nav-triggers').addClass('hover');
-
             }).on('mouseout', function () {
                 maxAndAegle.navigation.els.homeLink.parents('.nav-triggers').removeClass('hover');
             });

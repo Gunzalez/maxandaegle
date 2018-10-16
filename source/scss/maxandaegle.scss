@@ -195,8 +195,7 @@ body {
                 width: 108px;
                 height: 94px;
                 float: right;
-                margin-top: -40px;
-                opacity: 0.5;
+                margin-top: -36px;
 
                 padding: 0;
                 position: relative;
@@ -571,13 +570,22 @@ nav#menu {
                   font-size: 16px;
                   padding-top: 12px;
                   padding-bottom: 12px;
-                  color: $brand-pink-strong;
+                  color: $brand-gray-darker;
+
+                  &:hover {
+                      color: $brand-pink-strong;
+                  }
             }
 
             &.active {
 
                 a {
                     color: $brand-gray-darker;
+
+
+                    &:hover {
+                      color: $brand-gray-darker;
+                    }
                 }
             }
         }
