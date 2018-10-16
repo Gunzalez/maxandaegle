@@ -35,7 +35,9 @@
         },
 
         tiltInit: function(){
+
             if(maxAndAegle.homepageLink.els.link.length){
+
                 maxAndAegle.homepageLink.els.link.tilt({
                     // maxTilt:        20,
                     // perspective:    1000,   // Transform perspective, the lower the more extreme the tilt gets.
@@ -52,7 +54,9 @@
         },
 
         init: function () {
+
             maxAndAegle.homepageLink.isTouchDevice = 'ontouchstart' in document.documentElement;
+
             if( !maxAndAegle.homepageLink.isTouchDevice ) {
                 $('html').addClass('hover');
                 maxAndAegle.homepageLink.tiltInit();
@@ -65,32 +69,45 @@
         els: {
             menu: $("#menu"),
             button: $('#menu-trigger'),
-            api: null
+            api: null,
+            homeLink: $('.home-link')
         },
 
         init: function () {
 
-            maxAndAegle.navigation.els.menu.mmenu({
-                "extensions": [
-                    "pageshadow",
-                    // "theme-dark",
-                    // "pagedim",
-                    "effect-menu-slide",
-                    "effect-listitems-slide"
-                ],
-                "offCanvas": {
-                    "position": "right"
-                }
-            });
+            if(maxAndAegle.navigation.els.menu.length){
 
-            maxAndAegle.navigation.els.api = maxAndAegle.navigation.els.menu.data( "mmenu" );
+                maxAndAegle.navigation.els.menu.mmenu({
+                    "extensions": [
+                        "pageshadow",
+                        // "theme-dark",
+                        "pagedim",
+                        "effect-menu-slide",
+                        "effect-listitems-slide"
+                    ],
+                    "offCanvas": {
+                        "position": "right"
+                    }
+                });
 
-            maxAndAegle.navigation.els.api.bind( "opened", function() {
-                maxAndAegle.navigation.els.button.find('.hamburger').addClass('is-active');
-            });
+                maxAndAegle.navigation.els.api = maxAndAegle.navigation.els.menu.data( "mmenu" );
 
-            maxAndAegle.navigation.els.api.bind( "closed", function() {
-                maxAndAegle.navigation.els.button.find('.hamburger').removeClass('is-active');
+                maxAndAegle.navigation.els.api.bind( "opened", function() {
+                    maxAndAegle.navigation.els.button.find('.hamburger').addClass('is-active');
+                });
+
+                maxAndAegle.navigation.els.api.bind( "closed", function() {
+                    maxAndAegle.navigation.els.button.find('.hamburger').removeClass('is-active');
+                });
+            }
+
+            // home link effects
+            this.els.homeLink.on('mouseover', function () {
+
+                maxAndAegle.navigation.els.homeLink.parents('.nav-triggers').addClass('hover');
+
+            }).on('mouseout', function () {
+                maxAndAegle.navigation.els.homeLink.parents('.nav-triggers').removeClass('hover');
             });
         }
     };
