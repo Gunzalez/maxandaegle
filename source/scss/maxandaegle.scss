@@ -101,7 +101,7 @@ body {
 
         @media (min-width: $breakpoint2){
 
-            top: -120px;
+            top: 50px;
             right: 20px;
             width: 240px;
             height: 240px;
@@ -234,19 +234,13 @@ body {
         color: #ffffff;
 
         .copy {
-            padding: 0;
-            margin-top: 161px;
+            padding-top: 118px;
         }
 
         .sub-title {
             text-transform: uppercase;
             margin: 0;
-            padding-bottom: 15px;
-            line-height: 20px;
-        }
-
-        .title {
-            margin-top: 20px;
+            padding-bottom: 33px;
         }
 
         &.green {
