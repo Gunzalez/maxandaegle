@@ -433,40 +433,46 @@ body {
 .footer.footer-top {
   background: url("../images/bg-footer-top.jpg") center -60px no-repeat; }
 
-.footer .menu-list {
-  background: #3a3c44;
-  padding: 45px 0; }
-  .footer .menu-list ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-align: center;
-    width: 100%; }
-  .footer .menu-list li {
-    display: inline;
-    padding-right: 12px; }
-  .footer .menu-list a {
-    display: inline-block;
-    text-align: center;
-    background-image: url("../images/svg-hexagon-white.svg");
-    background-size: cover;
-    width: 40px;
-    height: 34px;
-    line-height: 34px;
-    color: #3a3c44;
-    transition: all 0.33s; }
-    .footer .menu-list a:hover {
-      color: white;
-      background-image: url("../images/svg-hexagon-green.svg"); }
+.footer .menu-list ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  width: 100%; }
+
+.footer .menu-list li {
+  display: inline;
+  padding-right: 12px; }
+
+.footer .menu-list a {
+  display: inline-block;
+  text-align: center;
+  background-image: url("../images/svg-hexagon-white.svg");
+  background-size: cover;
+  width: 40px;
+  height: 34px;
+  line-height: 34px;
+  color: #3a3c44;
+  transition: all 0.33s; }
+  .footer .menu-list a:hover {
+    color: white;
+    background-image: url("../images/svg-hexagon-green.svg"); }
 
 .footer .inner-footer {
-  padding-bottom: 15px; }
+  background: url("../images/bg-footer.png") left 80px no-repeat; }
   .footer .inner-footer .copy {
-    min-height: 260px;
     text-transform: uppercase;
+    font-style: italic;
     font-size: 22px;
-    line-height: 160%;
-    font-style: italic; }
+    line-height: 160%; }
+
+@media (min-width: 576px) {
+  .footer .inner-footer {
+    background: url("../images/bg-footer.png") left 15px no-repeat; } }
+
+@media (min-width: 768px) {
+  .footer .inner-footer {
+    background: url("../images/bg-footer.png") left -20px no-repeat; } }
 
 @media (min-width: 992px) {
   .footer .menu-list {
@@ -479,3 +485,24 @@ body {
     padding-bottom: 130px; }
   .footer.footer-top .menu-list {
     margin-top: 120px; } }
+
+.footer-nav {
+  text-align: center;
+  padding: 25px 0; }
+  .footer-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+  .footer-nav a {
+    color: #c3d800;
+    padding: 1px 15px;
+    border-right: 1px solid #eff3f4; }
+  .footer-nav li {
+    display: inline; }
+    .footer-nav li:nth-last-child(1) a {
+      border-right: none; }
+  @media (min-width: 992px) {
+    .footer-nav {
+      text-align: left; }
+      .footer-nav li:nth-child(1) a {
+        padding-left: 0; } }

@@ -437,8 +437,8 @@ body {
     }
 
     .menu-list {
-        background: $brand-gray-darker;
-        padding: 45px 0;
+        //background: $brand-gray-darker;
+        //padding: 45px 0;
 
         ul {
             margin: 0;
@@ -472,14 +472,28 @@ body {
     }
 
     .inner-footer {
-        padding-bottom: 15px;
+        background: url("../images/bg-footer.png") left 80px no-repeat;
 
         .copy {
-            min-height: 260px;
             text-transform: uppercase;
+            font-style: italic;
             font-size: 22px;
             line-height: 160%;
-            font-style: italic;
+        }
+    }
+
+    @media (min-width: $breakpoint1){
+
+        .inner-footer {
+            background: url("../images/bg-footer.png") left 15px no-repeat;
+        }
+    }
+
+
+    @media (min-width: $breakpoint2){
+
+        .inner-footer {
+            background: url("../images/bg-footer.png") left -20px no-repeat;
         }
     }
 
@@ -503,6 +517,49 @@ body {
 
             .menu-list {
                 margin-top: 120px;
+            }
+        }
+    }
+}
+
+
+.footer-nav {
+
+    text-align: center;
+    padding: 25px 0;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    a {
+        color: $brand-green-light;
+        padding: 1px 15px;
+        border-right: 1px solid $brand-gray-light;
+    }
+
+    li {
+        display: inline;
+
+        &:nth-last-child(1){
+            a {
+                border-right: none;
+            }
+        }
+    }
+
+    @media (min-width: $breakpoint3){
+
+        text-align: left;
+
+        li {
+
+            &:nth-child(1){
+                a {
+                    padding-left: 0;
+                }
             }
         }
     }
