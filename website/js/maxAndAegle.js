@@ -6,7 +6,7 @@
 
     maxAndAegle.environment = {
         init: function (){
-
+            $('.initial-display-none').removeClass('initial-display-none');
         }
     };
 

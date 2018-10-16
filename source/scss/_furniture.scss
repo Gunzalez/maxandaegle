@@ -218,6 +218,10 @@ form {
     margin: -1px; padding: 0; border: 0;
 }
 
+.initial-display-none {
+    display: none !important;
+}
+
 .hamburger.is-active:hover,
 .hamburger:hover {
     opacity: 1.0;
