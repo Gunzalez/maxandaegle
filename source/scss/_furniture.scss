@@ -126,10 +126,15 @@ form {
         border-radius: 0;
         text-transform: uppercase;
         font-size: 20px;
+        width: 100%;
 
         &:hover {
             background: $brand-green-light;
             border-color: $brand-green-light;
+        }
+
+        @media (min-width: $breakpoint3){
+            width: auto;
         }
     }
 
