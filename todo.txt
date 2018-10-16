@@ -36,7 +36,11 @@ Friday           06
 Saturday         12
 Sunday           03
 Monday           01
+Tuesday          12
 
 
 Fonts Business   05
+
+--------------------------------
+Totals           60 hours so far
 

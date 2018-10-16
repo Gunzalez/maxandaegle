@@ -570,6 +570,13 @@ nav#menu {
                   &:hover {
                       color: $brand-pink-strong;
                   }
+
+                  @media (min-width: $breakpoint3){
+
+
+                      padding-top: 15px;
+                      padding-bottom: 15px;
+                  }
             }
 
             &.active {

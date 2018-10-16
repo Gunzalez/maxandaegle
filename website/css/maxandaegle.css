@@ -35,9 +35,12 @@ h1 {
       font-size: 54px; } }
 
 h2 {
-  font-size: 30px;
+  font-size: 28px;
   padding-bottom: 12px;
   padding-top: 5px; }
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 32px; } }
 
 h3 {
   font-size: 25px;
@@ -526,6 +529,10 @@ nav#menu {
     color: #3a3c44; }
     nav#menu ul li a:hover {
       color: #e57ab1; }
+    @media (min-width: 992px) {
+      nav#menu ul li a {
+        padding-top: 15px;
+        padding-bottom: 15px; } }
   nav#menu ul li.active a {
     color: #3a3c44; }
     nav#menu ul li.active a:hover {
