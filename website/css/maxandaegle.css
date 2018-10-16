@@ -58,6 +58,14 @@ p {
       p.sub-title {
         font-size: 30px; } }
 
+.quote {
+  text-transform: uppercase;
+  font-size: 30px;
+  line-height: 130%;
+  text-align: center;
+  padding-left: 30px;
+  padding-right: 30px; }
+
 form {
   margin: 30px 0; }
   form .has-placeholder {
@@ -424,10 +432,6 @@ body {
   background: url("../images/bg-blockquote.jpg") top center no-repeat #b1c0c9;
   min-height: 412px; }
   .blockquote .copy {
-    text-transform: uppercase;
-    font-size: 28px;
-    line-height: 160%;
-    font-style: italic;
     color: white; }
 
 .footer.footer-top {
@@ -460,11 +464,6 @@ body {
 
 .footer .inner-footer {
   background: url("../images/bg-footer.png") left 80px no-repeat; }
-  .footer .inner-footer .copy {
-    text-transform: uppercase;
-    font-style: italic;
-    font-size: 22px;
-    line-height: 160%; }
 
 @media (min-width: 576px) {
   .footer .inner-footer {
