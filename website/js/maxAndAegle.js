@@ -74,7 +74,7 @@
                 "extensions": [
                     "pageshadow",
                     // "theme-dark",
-                    "pagedim",
+                    // "pagedim",
                     "effect-menu-slide",
                     "effect-listitems-slide"
                 ],
@@ -144,9 +144,7 @@
         maxAndAegle.contact.init();
     };
 
-
-
-    // main init
+    // main init call
     $(document).ready(function() {
         maxAndAegle.init();
     });

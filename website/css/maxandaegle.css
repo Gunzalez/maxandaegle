@@ -18,8 +18,11 @@ body {
   margin: 0 auto; }
 
 .copy {
-  padding: 30px 0;
+  padding: 15px 0;
   position: relative; }
+  @media (min-width: 768px) {
+    .copy {
+      padding: 30px 0; } }
 
 h1, h2, h3, h4, h5 {
   padding: 0;
@@ -51,7 +54,7 @@ p {
   padding-bottom: 12px;
   margin: 0; }
   p.sub-title {
-    font-size: 20px;
+    font-size: 16px;
     line-height: 20px; }
     @media (min-width: 768px) {
       p.sub-title {
@@ -149,12 +152,12 @@ body {
   color: #000104; }
 
 .header {
-  height: 90px;
+  height: 80px;
   color: #ffffff; }
   .header .sub-title {
     text-transform: uppercase;
     margin: 0;
-    padding-bottom: 15px; }
+    padding-bottom: 5px; }
   .header .copy {
     padding: 15px 0 0 0; }
   .header .title {
@@ -177,29 +180,29 @@ body {
       display: none; }
     .header .nav-triggers .home-link {
       float: left;
-      width: 58px;
-      height: 50px;
+      width: 49px;
+      height: 42px;
       background-image: url("../images/svg-hexagon-white.svg");
       background-size: cover;
       background-repeat: no-repeat;
       padding-top: 10px; }
       .header .nav-triggers .home-link .logo {
         display: block;
-        height: 32px;
+        height: 25px;
         margin: 0 auto; }
     .header .nav-triggers .nav-link {
       display: inline-block;
-      margin: 0 0 0 10px;
+      margin: 0 0 0 12px;
       padding: 0;
       float: left;
       position: relative;
       background-image: url("../images/svg-hexagon-pink.svg");
       background-size: cover;
       background-repeat: no-repeat;
-      width: 58px;
-      height: 50px; }
+      width: 49px;
+      height: 42px; }
       .header .nav-triggers .nav-link .hamburger {
-        margin: 12px 9px;
+        margin: 9px 4px;
         padding: 0; }
         .header .nav-triggers .nav-link .hamburger .hamburger-box {
           transform: scale(0.6); }
@@ -504,3 +507,16 @@ body {
       text-align: left; }
       .footer-nav li:nth-child(1) a {
         padding-left: 0; } }
+
+nav#menu .mm-title {
+  display: none; }
+
+nav#menu ul li a {
+  text-transform: uppercase;
+  font-size: 16px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  color: #e57ab1; }
+
+nav#menu ul li.active a {
+  color: #3a3c44; }
