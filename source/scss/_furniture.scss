@@ -82,12 +82,19 @@ p {
 
 .quote {
     text-transform: uppercase;
-    //font-style: italic;
-    font-size: 30px;
+    font-size: 20px;
     line-height: 130%;
     text-align: center;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @media (min-width: $breakpoint2){
+        font-size: 30px;
+        line-height: 130%;
+        text-align: center;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
 }
 
 form {

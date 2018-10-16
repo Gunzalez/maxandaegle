@@ -431,6 +431,18 @@ body {
         background: url("../images/bg-footer-top.jpg") center -60px no-repeat;
     }
 
+    .coloured-on-mobile {
+
+        background: $brand-gray-darker;
+        padding-top: 30px;
+
+
+        @media (min-width: $breakpoint3) {
+
+            background: none;
+        }
+    }
+
     .menu-list {
         //background: $brand-gray-darker;
         //padding: 45px 0;
@@ -463,25 +475,6 @@ body {
                 color: white;
                 background-image: url("../images/svg-hexagon-green.svg");
             }
-        }
-    }
-
-    .inner-footer {
-        background: url("../images/bg-footer.png") left 80px no-repeat;
-    }
-
-    @media (min-width: $breakpoint1){
-
-        .inner-footer {
-            background: url("../images/bg-footer.png") left 15px no-repeat;
-        }
-    }
-
-
-    @media (min-width: $breakpoint2){
-
-        .inner-footer {
-            background: url("../images/bg-footer.png") left -20px no-repeat;
         }
     }
 
