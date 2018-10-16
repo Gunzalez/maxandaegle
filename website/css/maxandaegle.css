@@ -417,14 +417,12 @@ body {
     background: black;
     color: white; }
 
-.hexagons-wide {
-  padding-bottom: 60px; }
-  .hexagons-wide .placeholder {
-    text-align: center;
-    padding-top: 200px;
-    min-height: 600px;
-    background: black;
-    color: white; }
+.hexagons-wide .placeholder {
+  text-align: center;
+  padding-top: 200px;
+  min-height: 600px;
+  background: black;
+  color: white; }
 
 .blockquote {
   background: url("../images/bg-blockquote.jpg") top center no-repeat #b1c0c9;
