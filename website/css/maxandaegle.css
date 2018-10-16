@@ -9,6 +9,9 @@ body {
   -webkit-text-size-adjust: 100%;
   -moz-text-size-adjust: none;
   -ms-text-size-adjust: 100%; }
+  @media (min-width: 768px) {
+    body {
+      font-size: 18px; } }
 
 .page {
   max-width: 1920px;
@@ -46,11 +49,7 @@ h4 {
 
 p {
   padding-bottom: 12px;
-  margin: 0;
-  font-size: 16px; }
-  @media (min-width: 768px) {
-    p {
-      font-size: 18px; } }
+  margin: 0; }
   p.sub-title {
     font-size: 20px;
     line-height: 20px; }
