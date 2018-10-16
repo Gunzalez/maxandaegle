@@ -8,7 +8,7 @@ body {
 }
 
 .header {
-    height: 100px;
+    height: 90px;
     color: #ffffff;
 
     .sub-title {
@@ -23,7 +23,6 @@ body {
 
     .title {
         line-height: 100%;
-        margin-top: 5px;
     }
 
     &.pink {
@@ -48,7 +47,7 @@ body {
 
     .nav-triggers {
         position: absolute;
-        top: 26px;
+        top: 20px;
         right: 0;
 
         .hex {
@@ -56,18 +55,24 @@ body {
         }
 
         .home-link {
-            display: inline-block;
             float: left;
+            width: 58px;
+            height: 50px;
+            background-image: url("../images/svg-hexagon-white.svg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding-top: 10px;
 
             .logo {
-                display: inline-block;
-                height: 56px;
+                display: block;
+                height: 32px;
+                margin: 0 auto;
             }
         }
 
         .nav-link {
             display: inline-block;
-            margin: 0 0 0 15px;
+            margin: 0 0 0 10px;
             padding: 0;
             float: left;
             position: relative;

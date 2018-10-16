@@ -142,7 +142,7 @@ body {
   color: #000104; }
 
 .header {
-  height: 100px;
+  height: 90px;
   color: #ffffff; }
   .header .sub-title {
     text-transform: uppercase;
@@ -151,8 +151,7 @@ body {
   .header .copy {
     padding: 15px 0 0 0; }
   .header .title {
-    line-height: 100%;
-    margin-top: 5px; }
+    line-height: 100%; }
   .header.pink {
     background: #e57ab1; }
   .header.black {
@@ -165,19 +164,25 @@ body {
     background: #cbdb2a; }
   .header .nav-triggers {
     position: absolute;
-    top: 26px;
+    top: 20px;
     right: 0; }
     .header .nav-triggers .hex {
       display: none; }
     .header .nav-triggers .home-link {
-      display: inline-block;
-      float: left; }
+      float: left;
+      width: 58px;
+      height: 50px;
+      background-image: url("../images/svg-hexagon-white.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      padding-top: 10px; }
       .header .nav-triggers .home-link .logo {
-        display: inline-block;
-        height: 56px; }
+        display: block;
+        height: 32px;
+        margin: 0 auto; }
     .header .nav-triggers .nav-link {
       display: inline-block;
-      margin: 0 0 0 15px;
+      margin: 0 0 0 10px;
       padding: 0;
       float: left;
       position: relative;
