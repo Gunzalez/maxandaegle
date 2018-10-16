@@ -507,19 +507,19 @@ body {
       .footer-nav li:nth-child(1) a {
         padding-left: 0; } }
 
-nav#menu .mm-title {
-  display: none; }
-
-nav#menu ul li a {
-  text-transform: uppercase;
-  font-size: 16px;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  color: #3a3c44; }
-  nav#menu ul li a:hover {
-    color: #e57ab1; }
-
-nav#menu ul li.active a {
-  color: #3a3c44; }
-  nav#menu ul li.active a:hover {
+nav#menu {
+  background: #f9f9f9; }
+  nav#menu .mm-title {
+    display: none; }
+  nav#menu ul li a {
+    text-transform: uppercase;
+    font-size: 16px;
+    padding-top: 12px;
+    padding-bottom: 12px;
     color: #3a3c44; }
+    nav#menu ul li a:hover {
+      color: #e57ab1; }
+  nav#menu ul li.active a {
+    color: #3a3c44; }
+    nav#menu ul li.active a:hover {
+      color: #3a3c44; }
