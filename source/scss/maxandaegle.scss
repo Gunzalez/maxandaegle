@@ -417,11 +417,32 @@ body {
 }
 
 .blockquote {
-    background: url("../images/bg-blockquote.jpg") top center no-repeat $brand-gray-dark;
-    min-height: 412px;
+    background: $brand-gray-dark;
 
     .copy {
         color: white;
+    }
+
+    .quote {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    @media (min-width: $breakpoint3) {
+
+        background: url("../images/bg-blockquote.jpg") top center no-repeat $brand-gray-dark;
+
+
+        .copy {
+            min-height: 412px;
+        }
+
+        .quote {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
     }
 }
 
@@ -582,11 +603,11 @@ nav#menu {
             &.active {
 
                 a {
-                    color: $brand-gray-darker;
+                    color: $brand-pink-strong;
 
 
                     &:hover {
-                      color: $brand-gray-darker;
+                      color: $brand-pink-strong;
                     }
                 }
             }

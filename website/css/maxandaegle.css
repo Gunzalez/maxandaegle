@@ -447,10 +447,22 @@ body {
   color: white; }
 
 .blockquote {
-  background: url("../images/bg-blockquote.jpg") top center no-repeat #b1c0c9;
-  min-height: 412px; }
+  background: #b1c0c9; }
   .blockquote .copy {
     color: white; }
+  .blockquote .quote {
+    display: flex;
+    justify-content: center;
+    flex-direction: column; }
+  @media (min-width: 992px) {
+    .blockquote {
+      background: url("../images/bg-blockquote.jpg") top center no-repeat #b1c0c9; }
+      .blockquote .copy {
+        min-height: 412px; }
+      .blockquote .quote {
+        display: flex;
+        justify-content: center;
+        flex-direction: column; } }
 
 .footer.footer-top {
   background: url("../images/bg-footer-top.jpg") center -60px no-repeat; }
@@ -537,6 +549,6 @@ nav#menu {
         padding-top: 15px;
         padding-bottom: 15px; } }
   nav#menu ul li.active a {
-    color: #3a3c44; }
+    color: #e57ab1; }
     nav#menu ul li.active a:hover {
-      color: #3a3c44; }
+      color: #e57ab1; }
