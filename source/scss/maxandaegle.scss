@@ -180,9 +180,6 @@ body {
                 }
 
                 &:hover {
-                    //background-image: url("../images/svg-hexagon-green-light.svg");
-                    //background-size: cover;
-                    //background-repeat: no-repeat;
                     z-index: 30;
                 }
             }
@@ -405,7 +402,6 @@ body {
 }
 
 .hexagons-wide {
-    //padding-bottom: 60px;
 
     .placeholder {
         text-align: center;
@@ -453,13 +449,10 @@ body {
     }
 
     .coloured-on-mobile {
-
         background: $brand-gray-darker;
         padding-top: 30px;
 
-
         @media (min-width: $breakpoint3) {
-
             background: none;
         }
     }
@@ -571,7 +564,7 @@ body {
     }
 }
 
-// mobile menu overrides
+/// mobile menu overrides
 nav#menu {
 
     background: #f9f9f9;
