@@ -465,8 +465,6 @@ body {
     }
 
     .menu-list {
-        //background: $brand-gray-darker;
-        //padding: 45px 0;
 
         ul {
             margin: 0;
@@ -496,6 +494,12 @@ body {
                 color: white;
                 background-image: url("../images/svg-hexagon-green.svg");
             }
+        }
+
+        i {
+            font-size: 26px;
+            margin-top: 4px;
+            display: inline-block;
         }
     }
 
