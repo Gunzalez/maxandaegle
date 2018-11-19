@@ -64,6 +64,42 @@
         }
     };
 
+    maxAndAegle.gallery = {
+
+        els: {
+            thumbnails: $('#gallery-images'),
+            overlay: null
+
+        },
+
+        createOverlay: function(){
+
+            maxAndAegle.gallery.overlay = $('<div id="overlay" />');
+
+            $('body').prepend(maxAndAegle.gallery.overlay);
+
+            $(maxAndAegle.gallery.overlay).on('click', function () {
+                $(maxAndAegle.gallery.overlay).removeClass('show')
+            });
+
+            // add close button X
+        },
+
+        init: function () {
+            if(maxAndAegle.gallery.els.thumbnails.length){
+
+                maxAndAegle.gallery.createOverlay();
+
+                maxAndAegle.gallery.els.thumbnails.on('click', 'a', function (evt) {
+                    evt.preventDefault();
+                    $(maxAndAegle.gallery.overlay).addClass('show');
+                })
+
+
+            }
+        }
+    };
+
     maxAndAegle.navigation = {
 
         els: {
@@ -157,6 +193,7 @@
         maxAndAegle.navigation.init();
         maxAndAegle.homepageLink.init();
         maxAndAegle.contact.init();
+        maxAndAegle.gallery.init();
     };
 
     // main init call
