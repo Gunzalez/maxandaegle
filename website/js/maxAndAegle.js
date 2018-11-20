@@ -72,7 +72,6 @@
             parentNode: $('#gallery-images'),
             thumbnails: $('#gallery-images').find('a'),
             overlay: null
-
         },
 
         hideOverlay: function(){
@@ -101,10 +100,9 @@
                 sets = ['left', 'center', 'right'];
 
             $stage.append($stageSets);
-            sets.forEach(function (set) {
-                var $set = $('<div class="stage-set stage-'+ set +'" />');
-                $stageSets.append($set);
-            });
+            for(var s=0; s<sets.length; s++){
+                $stageSets.append($('<div class="stage-set stage-'+ sets[s] +'" />'));
+            }
 
             overlay.append($stage);
 
@@ -124,12 +122,30 @@
 
         startWithImage: function(index){
 
-            var imageSrc = maxAndAegle.gallery.images[index],
-                $image = $('<img src="'+ imageSrc + '" alt="" />');
+            var count = maxAndAegle.gallery.images.length - 1;
 
-            maxAndAegle.gallery.overlay.find('.stage-center').empty().append($image);
-            maxAndAegle.gallery.overlay.find('.stage-left').empty().append($image.clone());
-            maxAndAegle.gallery.overlay.find('.stage-right').empty().append($image.clone());
+            var nextIndex = index + 1;
+            if(nextIndex > count){
+                nextIndex = 0;
+            }
+
+            var prevIndex = index - 1;
+            if(prevIndex < 0){
+                prevIndex = count;
+            }
+
+            var prevImageSrc = maxAndAegle.gallery.images[prevIndex],
+                $prevImage = $('<img src="'+ prevImageSrc + '" alt="" />');
+
+            var centerImageSrc = maxAndAegle.gallery.images[index],
+                $centerImage = $('<img src="'+ centerImageSrc + '" alt="" />');
+
+            var nextImageSrc = maxAndAegle.gallery.images[nextIndex],
+                $nextImage = $('<img src="'+ nextImageSrc + '" alt="" />');
+
+            maxAndAegle.gallery.overlay.find('.stage-center').empty().append($centerImage);
+            maxAndAegle.gallery.overlay.find('.stage-left').empty().append($prevImage);
+            maxAndAegle.gallery.overlay.find('.stage-right').empty().append($nextImage);
 
         },
 
@@ -146,7 +162,6 @@
 
                     var index = $(maxAndAegle.gallery.els.thumbnails).index(this);
                     maxAndAegle.gallery.startWithImage(index);
-
                 });
 
 
