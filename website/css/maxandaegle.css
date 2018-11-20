@@ -629,7 +629,7 @@ nav#menu {
     nav#menu ul li.active a:hover {
       color: #e57ab1; }
 
-.noscroll {
+.noScroll {
   overflow: hidden; }
 
 #overlay {
@@ -659,30 +659,25 @@ nav#menu {
   #overlay #stage {
     border-top: 2px solid white;
     border-bottom: 2px solid white;
-    padding: 40px 0;
+    padding: 80px 0;
     background-color: black;
     /* Fallback color */
     background-color: rgba(0, 0, 0, 0.4);
     /* Black w/ opacity */
     overflow: hidden;
     position: relative;
-    height: 900px; }
+    height: 940px; }
   #overlay .stage-sets {
-    width: 3195px;
-    height: 836px;
+    width: 3255px;
     position: absolute;
     left: 50%;
     top: 50%;
     -webkit-transform: translateX(-50%) translateY(-50%); }
   #overlay .stage-set {
     width: 1025px;
-    height: 836px;
-    margin: 0 20px;
+    margin: 0 30px;
     display: inline-block;
     border: 2px solid white; }
-  #overlay .stage-left {
-    background: red; }
-  #overlay .stage-right {
-    background: green; }
-  #overlay .stage-center {
-    background: blue; }
+    #overlay .stage-set img {
+      width: 100%;
+      display: block; }
