@@ -4,6 +4,10 @@
     var maxAndAegle = {};
     window.maxAndAegle = maxAndAegle;
 
+    maxAndAegle.properties = {
+        windowWidth: null
+    };
+
     maxAndAegle.environment = {
         init: function (){
             $('.initial-display-none').removeClass('initial-display-none');
@@ -77,12 +81,12 @@
 
         hideOverlay: function(){
             $(maxAndAegle.gallery.overlay).removeClass('show');
-            $('html').removeClass('noScroll');
+            $('html').removeClass('no-scroll');
         },
 
         showOverlay: function(){
             $(maxAndAegle.gallery.overlay).addClass('show');
-            $('html').addClass('noScroll');
+            $('html').addClass('no-scroll');
         },
 
         createOverlay: function(){
@@ -193,8 +197,23 @@
                     maxAndAegle.gallery.showOverlay();
 
                     maxAndAegle.gallery.setUpImagesWithIndex($(maxAndAegle.gallery.els.thumbnails).index(this));
+
                 });
             }
+        },
+
+        resize: function () {
+
+            if(maxAndAegle.properties.windowWidth && maxAndAegle.properties.windowWidth < 1400){
+                $('.stage-set').width(800);
+                $('.stage-sets').width(3 * $('.stage-set').outerWidth());
+            } else {
+                $('.stage-set').removeAttr('style');
+                $('.stage-sets').removeAttr('style');
+            }
+
+
+
         }
     };
 
@@ -292,6 +311,26 @@
         maxAndAegle.homepageLink.init();
         maxAndAegle.contact.init();
         maxAndAegle.gallery.init();
+
+        $(window).on('resize', function () {
+
+            var newWidth = $(window).width(),
+                oldWidth = maxAndAegle.properties.windowWidth;
+
+            if (oldWidth !== newWidth) {
+                maxAndAegle.properties.windowWidth = newWidth;
+                maxAndAegle.resize();
+            }
+        });
+
+        // trigger initial resize, just to be sure
+        maxAndAegle.resize();
+        $(window).trigger('resize');
+    };
+
+    // main resize
+    maxAndAegle.resize = function () {
+        maxAndAegle.gallery.resize();
     };
 
     // main init call
