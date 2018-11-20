@@ -103,7 +103,7 @@
                 $stageSets = $('<div class="stage-sets" />'),
                 overlay = maxAndAegle.gallery.overlay,
                 sets = ['left', 'center', 'right'],
-                buttons = ['prev', 'next'];
+                buttons = ['left', 'right'];
 
             $stage.append($stageSets);
             for(var s=0; s<sets.length; s++){
@@ -113,7 +113,7 @@
             overlay.append($stage);
 
             for(var b=0; b<buttons.length; b++){
-                $stage.append($('<div class="gallery-nav nav-'+ buttons[b] +'"><a href="" class="move-images hexagon direction-'+ buttons[b] +'" data-direction="'+ buttons[b] + '"></a></div>'));
+                $stage.append($('<div class="gallery-nav nav-'+ buttons[b] +'"><a href="#" class="move-images hexagon direction-'+ buttons[b] +'" data-direction="'+ buttons[b] + '"><i class="fas fa-chevron-'+ buttons[b] +'"></i></a></div>'));
             }
 
             $stage.on('click', '.move-images', function (evt) {
@@ -129,7 +129,7 @@
                 e.stopPropagation();
             });
 
-            var $closeButton = $('<div class="closeOverlay"><a href="" class="close-overlay-button">CLOSE</a></div>');
+            var $closeButton = $('<div class="closeOverlay"><a href="#" class="close-overlay-button"><i class="fas fa-times"></i></a></div>');
             overlay.append($closeButton);
 
             overlay.on('click', '.close-overlay-button', function (evt) {
@@ -141,7 +141,7 @@
         moveImages: function(direction){
 
             var currentImageIndex = maxAndAegle.gallery.currentImageIndex,
-                newImageIndex = direction === 'next' ? (currentImageIndex + 1) : (currentImageIndex - 1),
+                newImageIndex = direction === 'right' ? (currentImageIndex + 1) : (currentImageIndex - 1),
                 count = maxAndAegle.gallery.images.length - 1;
 
             if(newImageIndex > count){
@@ -204,16 +204,21 @@
 
         resize: function () {
 
-            if(maxAndAegle.properties.windowWidth && maxAndAegle.properties.windowWidth < 1400){
-                $('.stage-set').width(800);
-                $('.stage-sets').width(3 * $('.stage-set').outerWidth());
-            } else {
-                $('.stage-set').removeAttr('style');
-                $('.stage-sets').removeAttr('style');
+            var windowWidth = maxAndAegle.properties.windowWidth;
+
+            if(windowWidth){
+
+                if(windowWidth < 1400) {
+                    $('.stage-set').width(800);
+                    $('.stage-sets').width(3 * $('.stage-set').outerWidth());
+                } else if(windowWidth < 900){
+                    $('.stage-set').css('width', '60%');
+                    $('.stage-sets').css('width', '100%');
+                } else {
+                    $('.stage-set').removeAttr('style');
+                    $('.stage-sets').removeAttr('style');
+                }
             }
-
-
-
         }
     };
 
@@ -330,7 +335,7 @@
 
     // main resize
     maxAndAegle.resize = function () {
-        maxAndAegle.gallery.resize();
+        //maxAndAegle.gallery.resize();
     };
 
     // main init call

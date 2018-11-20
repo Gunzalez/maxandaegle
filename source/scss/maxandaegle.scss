@@ -616,7 +616,7 @@ nav#menu {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 100; /* Sit on top */
-    padding-top: 60px; /* Location of the box */
+    padding-top: 80px; /* Location of the box */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -638,42 +638,69 @@ nav#menu {
 
         .gallery-nav {
             position: absolute;
-            top: 30%;
+            bottom: 20px;
 
             a {
-                width: 126px;
-                height: 110px;
+                width: 49px;
+                height: 42px;
                 display: block;
+                background-image: url(../images/svg-hexagon-green.svg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                text-align: center;
+
+                i {
+                    font-size: 1.6rem;
+                    line-height: 42px;
+                    margin: 0 auto;
+                    color: #000000;
+                }
             }
 
-            &.nav-prev {
-                left: 40px;
+            &.nav-left {
+                left: 20px;
             }
 
-            &.nav-next {
-                right: 40px;
+            &.nav-right {
+                right: 20px;
             }
 
-            @media (min-width: $breakpoint5){
-                top: 40%;
+
+            @media (min-width: $breakpoint2){
+                bottom: auto;
+                top: 35%;
+
+                &.nav-left {
+                    left: 7%;
+                }
+
+                &.nav-right {
+                    right: 7%;
+                }
             }
         }
     }
 
     .stage-sets {
-        width: 3075px;
+        width: 100%;
         position: absolute;
-        border-top: 2px solid white;
-        border-bottom: 2px solid white;
         padding: 40px 0;
         background-color: rgb(0,0,0); /* Fallback color */
         background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
         left: 50%;
         -webkit-transform: translateX(-50%);
+        height: 100%;
+
+        @media (min-width: $breakpoint3){
+            height: auto;
+            width: 3000px;
+            border-top: 2px solid white;
+            border-bottom: 2px solid white;
+        }
     }
 
     .stage-set {
-        width: 1025px;
+        width: 100%;
         padding: 0 30px;
         display: inline-block;
         //background: url("../images/loading-spinner.gif") center center no-repeat #ffffff;
@@ -691,6 +718,14 @@ nav#menu {
                 -webkit-filter: grayscale(100%);
                 filter: grayscale(100%);
             }
+
+            @media (max-width: $breakpoint3){
+                display: none;
+            }
+        }
+
+        @media (min-width: $breakpoint3){
+            width: 1000px;
         }
     }
 
@@ -705,8 +740,26 @@ nav#menu {
 
     .closeOverlay {
         position: absolute;
-        right: 40px;
-        top: 12px;
+        right: 15px;
+        top: 20px;
+
+        a {
+            width: 49px;
+            height: 42px;
+            background-image: url(../images/svg-hexagon-green.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: block;
+            color: white;
+            text-align: center;
+
+            i {
+                font-size: 1.6rem;
+                line-height: 42px;
+                margin: 0 auto;
+                color: #000000;
+            }
+        }
     }
 }
 
