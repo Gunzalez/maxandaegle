@@ -667,6 +667,19 @@ nav#menu {
     overflow: hidden;
     position: relative;
     height: 940px; }
+    #overlay #stage .gallery-nav {
+      position: absolute;
+      top: 50%;
+      margin-top: -64px; }
+      #overlay #stage .gallery-nav a {
+        width: 128px;
+        height: 128px;
+        background: red;
+        display: block; }
+      #overlay #stage .gallery-nav.nav-prev {
+        left: 10%; }
+      #overlay #stage .gallery-nav.nav-next {
+        right: 10%; }
   #overlay .stage-sets {
     width: 3255px;
     position: absolute;

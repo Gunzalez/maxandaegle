@@ -67,6 +67,7 @@
     maxAndAegle.gallery = {
 
         images: [],
+        currentImageIndex: null,
 
         els: {
             parentNode: $('#gallery-images'),
@@ -97,7 +98,8 @@
             var $stage = $('<div id="stage" />'),
                 $stageSets = $('<div class="stage-sets" />'),
                 overlay = maxAndAegle.gallery.overlay,
-                sets = ['left', 'center', 'right'];
+                sets = ['left', 'center', 'right'],
+                buttons = ['prev', 'next'];
 
             $stage.append($stageSets);
             for(var s=0; s<sets.length; s++){
@@ -106,11 +108,42 @@
 
             overlay.append($stage);
 
+            for(var b=0; b<buttons.length; b++){
+                $stage.append($('<div class="gallery-nav nav-'+ buttons[b] +'"><a href="#" class="move-images" data-direction="'+ buttons[b] + '"></a></div>'));
+            }
+
+            $stage.on('click', '.move-images', function (evt) {
+                evt.preventDefault();
+
+                var buttonClicked = this,
+                    direction = $(buttonClicked).attr('data-direction');
+
+                maxAndAegle.gallery.moveImages(direction);
+
+            });
+
             $stage.on('click', function (e) {
                 e.stopPropagation();
             });
 
             // add close button X
+        },
+
+        moveImages: function(direction){
+
+            var currentImageIndex = maxAndAegle.gallery.currentImageIndex,
+                newImageIndex = direction === 'next' ? (currentImageIndex + 1) : (currentImageIndex - 1),
+                count = maxAndAegle.gallery.images.length - 1;
+
+            if(newImageIndex > count){
+                newImageIndex = 0;
+            }
+
+            if(newImageIndex < 0){
+                newImageIndex = count;
+            }
+
+            maxAndAegle.gallery.setUpImagesBasedOn(newImageIndex);
         },
 
         getImageData: function(){
@@ -120,7 +153,9 @@
             }
         },
 
-        startWithImage: function(index){
+        setUpImagesBasedOn: function(index){
+
+            maxAndAegle.gallery.currentImageIndex = index;
 
             var count = maxAndAegle.gallery.images.length - 1;
 
@@ -146,7 +181,6 @@
             maxAndAegle.gallery.overlay.find('.stage-center').empty().append($centerImage);
             maxAndAegle.gallery.overlay.find('.stage-left').empty().append($prevImage);
             maxAndAegle.gallery.overlay.find('.stage-right').empty().append($nextImage);
-
         },
 
         init: function () {
@@ -161,9 +195,8 @@
                     maxAndAegle.gallery.showOverlay();
 
                     var index = $(maxAndAegle.gallery.els.thumbnails).index(this);
-                    maxAndAegle.gallery.startWithImage(index);
+                    maxAndAegle.gallery.setUpImagesBasedOn(index);
                 });
-
 
             }
         }

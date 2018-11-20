@@ -639,11 +639,31 @@ nav#menu {
         overflow: hidden;
         position: relative;
         height: 940px;
+
+        .gallery-nav {
+            position: absolute;
+            top: 50%;
+            margin-top: -64px;
+
+            a {
+                width: 128px;
+                height: 128px;
+                background: red;
+                display: block;
+            }
+
+            &.nav-prev {
+                left: 10%;
+            }
+
+            &.nav-next {
+                right: 10%;
+            }
+        }
     }
 
     .stage-sets {
         width: 3255px;
-        //height: 836px;
         position: absolute;
         left: 50%;
         top: 50%;
@@ -652,14 +672,12 @@ nav#menu {
 
     .stage-set {
         width: 1025px;
-        //height: 836px;
         margin: 0 30px;
         display: inline-block;
         border: 2px solid white;
 
         img {
             width: 100%;
-            //height: 100%;
             display: block;
         }
     }
