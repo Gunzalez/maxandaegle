@@ -79,8 +79,30 @@
             $('body').prepend(maxAndAegle.gallery.overlay);
 
             $(maxAndAegle.gallery.overlay).on('click', function () {
-                $(maxAndAegle.gallery.overlay).removeClass('show')
+                $(maxAndAegle.gallery.overlay).removeClass('show');
+                $('html').removeClass('noscroll');
             });
+
+            var $stage = $('<div id="stage" />');
+            var $stageSets = $('<div class="stage-sets" />');
+            var overlay = maxAndAegle.gallery.overlay;
+            var sets = ['right', 'center', 'left'];
+
+            $stage.append($stageSets);
+            sets.forEach(function (set) {
+                var $set = $('<div class="stage-set stage-'+ set +'" />');
+                $stageSets.append($set);
+            });
+
+            overlay.append($stage);
+
+            $stage.on('click', function (e) {
+                e.stopPropagation();
+            });
+
+
+
+
 
             // add close button X
         },
@@ -93,6 +115,7 @@
                 maxAndAegle.gallery.els.thumbnails.on('click', 'a', function (evt) {
                     evt.preventDefault();
                     $(maxAndAegle.gallery.overlay).addClass('show');
+                    $('html').addClass('noscroll');
                 })
 
 
