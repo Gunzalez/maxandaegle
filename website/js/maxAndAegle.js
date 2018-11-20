@@ -149,7 +149,7 @@
                 newImageIndex = count;
             }
 
-            maxAndAegle.gallery.setUpImagesBasedOn(newImageIndex);
+            maxAndAegle.gallery.setUpImagesWithIndex(newImageIndex);
         },
 
         getImageData: function(){
@@ -159,7 +159,7 @@
             }
         },
 
-        setUpImagesBasedOn: function(index){
+        setUpImagesWithIndex: function(index){
 
             maxAndAegle.gallery.currentImageIndex = index;
 
@@ -188,13 +188,13 @@
                 maxAndAegle.gallery.getImageData();
 
                 maxAndAegle.gallery.els.parentNode.on('click', 'a', function (evt) {
+
                     evt.preventDefault();
+
                     maxAndAegle.gallery.showOverlay();
 
-                    var index = $(maxAndAegle.gallery.els.thumbnails).index(this);
-                    maxAndAegle.gallery.setUpImagesBasedOn(index);
+                    maxAndAegle.gallery.setUpImagesWithIndex($(maxAndAegle.gallery.els.thumbnails).index(this));
                 });
-
             }
         }
     };

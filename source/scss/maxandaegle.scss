@@ -648,7 +648,6 @@ nav#menu {
             a {
                 width: 126px;
                 height: 110px;
-                //background: red;
                 display: block;
             }
 
@@ -675,6 +674,8 @@ nav#menu {
         margin: 0 30px;
         display: inline-block;
         border: 2px solid white;
+        background: url("../images/loading-spinner.gif") center center no-repeat #ffffff;
+        height: 836px;
 
         img {
             width: 100%;

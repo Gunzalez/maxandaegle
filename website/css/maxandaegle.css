@@ -689,7 +689,9 @@ nav#menu {
     width: 1025px;
     margin: 0 30px;
     display: inline-block;
-    border: 2px solid white; }
+    border: 2px solid white;
+    background: url("../images/loading-spinner.gif") center center no-repeat #ffffff;
+    height: 836px; }
     #overlay .stage-set img {
       width: 100%;
       display: block; }
