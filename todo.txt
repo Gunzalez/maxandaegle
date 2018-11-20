@@ -3,7 +3,17 @@ Stuff to do
 =============================
 * form validation
 * Discus exit strategy
+
+
+DOING
+===========
 * Overlay carousel
+
+HOURS
+==========
+Sunday - 4
+Monday - 8
+Tuesday - 6
 
 
 

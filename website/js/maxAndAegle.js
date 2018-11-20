@@ -109,7 +109,7 @@
             overlay.append($stage);
 
             for(var b=0; b<buttons.length; b++){
-                $stage.append($('<div class="gallery-nav nav-'+ buttons[b] +'"><a href="#" class="move-images hexagon direction-'+ buttons[b] +'" data-direction="'+ buttons[b] + '"></a></div>'));
+                $stage.append($('<div class="gallery-nav nav-'+ buttons[b] +'"><a href="" class="move-images hexagon direction-'+ buttons[b] +'" data-direction="'+ buttons[b] + '"></a></div>'));
             }
 
             $stage.on('click', '.move-images', function (evt) {
@@ -125,14 +125,13 @@
                 e.stopPropagation();
             });
 
-            var $closeButton = $('<div class="closeOverlay"><a href="#" class="close-overlay-button">CLOSE</a></div>');
+            var $closeButton = $('<div class="closeOverlay"><a href="" class="close-overlay-button">CLOSE</a></div>');
             overlay.append($closeButton);
 
             overlay.on('click', '.close-overlay-button', function (evt) {
                 evt.preventDefault();
                 maxAndAegle.gallery.hideOverlay();
             });
-
         },
 
         moveImages: function(direction){

@@ -681,6 +681,14 @@ nav#menu {
             width: 100%;
             display: block;
         }
+
+        &.stage-right,
+        &.stage-left {
+            img {
+                -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+                filter: grayscale(100%);
+            }
+        }
     }
 
     .hexagon {

@@ -695,6 +695,10 @@ nav#menu {
     #overlay .stage-set img {
       width: 100%;
       display: block; }
+    #overlay .stage-set.stage-right img, #overlay .stage-set.stage-left img {
+      -webkit-filter: grayscale(100%);
+      /* Safari 6.0 - 9.0 */
+      filter: grayscale(100%); }
   #overlay .hexagon {
     background: url("../images/gallery-arrow.png");
     background-size: cover; }
