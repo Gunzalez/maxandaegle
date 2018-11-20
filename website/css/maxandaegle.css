@@ -672,9 +672,8 @@ nav#menu {
       top: 50%;
       margin-top: -64px; }
       #overlay #stage .gallery-nav a {
-        width: 128px;
-        height: 128px;
-        background: red;
+        width: 126px;
+        height: 110px;
         display: block; }
       #overlay #stage .gallery-nav.nav-prev {
         left: 10%; }
@@ -694,3 +693,8 @@ nav#menu {
     #overlay .stage-set img {
       width: 100%;
       display: block; }
+  #overlay .hexagon {
+    background: url("../images/gallery-arrow.png");
+    background-size: cover; }
+    #overlay .hexagon.direction-next {
+      transform: scaleX(-1); }

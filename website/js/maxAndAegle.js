@@ -103,13 +103,13 @@
 
             $stage.append($stageSets);
             for(var s=0; s<sets.length; s++){
-                $stageSets.append($('<div class="stage-set stage-'+ sets[s] +'" />'));
+                $stageSets.append($('<div class="stage-set stage-'+ sets[s] +'"><img class="image-' + sets[s] + '" /></div>'));
             }
 
             overlay.append($stage);
 
             for(var b=0; b<buttons.length; b++){
-                $stage.append($('<div class="gallery-nav nav-'+ buttons[b] +'"><a href="#" class="move-images" data-direction="'+ buttons[b] + '"></a></div>'));
+                $stage.append($('<div class="gallery-nav nav-'+ buttons[b] +'"><a href="#" class="move-images hexagon direction-'+ buttons[b] +'" data-direction="'+ buttons[b] + '"></a></div>'));
             }
 
             $stage.on('click', '.move-images', function (evt) {
@@ -125,6 +125,8 @@
             $stage.on('click', function (e) {
                 e.stopPropagation();
             });
+
+            // var $closeButton =
 
             // add close button X
         },
@@ -169,18 +171,9 @@
                 prevIndex = count;
             }
 
-            var prevImageSrc = maxAndAegle.gallery.images[prevIndex],
-                $prevImage = $('<img src="'+ prevImageSrc + '" alt="" />');
-
-            var centerImageSrc = maxAndAegle.gallery.images[index],
-                $centerImage = $('<img src="'+ centerImageSrc + '" alt="" />');
-
-            var nextImageSrc = maxAndAegle.gallery.images[nextIndex],
-                $nextImage = $('<img src="'+ nextImageSrc + '" alt="" />');
-
-            maxAndAegle.gallery.overlay.find('.stage-center').empty().append($centerImage);
-            maxAndAegle.gallery.overlay.find('.stage-left').empty().append($prevImage);
-            maxAndAegle.gallery.overlay.find('.stage-right').empty().append($nextImage);
+            maxAndAegle.gallery.overlay.find('.image-right').attr('src', maxAndAegle.gallery.images[nextIndex]);
+            maxAndAegle.gallery.overlay.find('.image-center').attr('src', maxAndAegle.gallery.images[index]);
+            maxAndAegle.gallery.overlay.find('.image-left').attr('src', maxAndAegle.gallery.images[prevIndex]);
         },
 
         init: function () {
