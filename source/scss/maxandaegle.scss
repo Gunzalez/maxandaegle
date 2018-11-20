@@ -690,6 +690,12 @@ nav#menu {
             transform:scaleX(-1);
         }
     }
+
+    .closeOverlay {
+        position: absolute;
+        right: 40px;
+        top: 12px;
+    }
 }
 
 

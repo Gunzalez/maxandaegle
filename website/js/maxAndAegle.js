@@ -119,16 +119,20 @@
                     direction = $(buttonClicked).attr('data-direction');
 
                 maxAndAegle.gallery.moveImages(direction);
-
             });
 
             $stage.on('click', function (e) {
                 e.stopPropagation();
             });
 
-            // var $closeButton =
+            var $closeButton = $('<div class="closeOverlay"><a href="#" class="close-overlay-button">CLOSE</a></div>');
+            overlay.append($closeButton);
 
-            // add close button X
+            overlay.on('click', '.close-overlay-button', function (evt) {
+                evt.preventDefault();
+                maxAndAegle.gallery.hideOverlay();
+            });
+
         },
 
         moveImages: function(direction){

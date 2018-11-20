@@ -698,3 +698,7 @@ nav#menu {
     background-size: cover; }
     #overlay .hexagon.direction-next {
       transform: scaleX(-1); }
+  #overlay .closeOverlay {
+    position: absolute;
+    right: 40px;
+    top: 12px; }
