@@ -7,7 +7,7 @@ var browserSync = require('browser-sync').create();
 
 // configure the jshint task
 gulp.task('jshint', function() {
-    return gulp.src('website/js/*.js')
+    return gulp.src(['website/js/*.js', 'website/js/*.min.js'])
             .pipe(jshint())
             .pipe(jshint.reporter('jshint-stylish'))
             .pipe(browserSync.reload({

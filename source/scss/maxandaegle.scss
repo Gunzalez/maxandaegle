@@ -609,7 +609,6 @@ nav#menu {
 
 .no-scroll {
     overflow: hidden;
-    margin-right: 15px;
 }
 
 
@@ -706,12 +705,27 @@ nav#menu {
         padding: 0 30px;
         display: inline-block;
         //background: url("../images/loading-spinner.gif") center center no-repeat #ffffff;
+        position: relative;
 
         img {
             width: 100%;
             display: block;
             border: 2px solid white;
             transition: all 1s;
+        }
+
+        .caption {
+            position: absolute;
+            left: 32px;
+            right: 32px;
+            bottom: 2px;
+            height: 120px;
+            background: rgba(0,0,0,0.6);
+            color: white;
+            padding: 10px 30px;
+            font-size: 1.8rem;
+            font-weight: 300;
+            font-style: italic;
         }
 
         &.stage-right,
@@ -722,6 +736,10 @@ nav#menu {
             }
 
             @media (max-width: $breakpoint3){
+                display: none;
+            }
+
+            .caption {
                 display: none;
             }
         }

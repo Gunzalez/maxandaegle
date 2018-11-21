@@ -630,8 +630,7 @@ nav#menu {
       color: #e57ab1; }
 
 .no-scroll {
-  overflow: hidden;
-  margin-right: 15px; }
+  overflow: hidden; }
 
 #overlay {
   display: none;
@@ -710,18 +709,33 @@ nav#menu {
   #overlay .stage-set {
     width: 100%;
     padding: 0 30px;
-    display: inline-block; }
+    display: inline-block;
+    position: relative; }
     #overlay .stage-set img {
       width: 100%;
       display: block;
       border: 2px solid white;
       transition: all 1s; }
+    #overlay .stage-set .caption {
+      position: absolute;
+      left: 32px;
+      right: 32px;
+      bottom: 2px;
+      height: 120px;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 10px 30px;
+      font-size: 1.8rem;
+      font-weight: 300;
+      font-style: italic; }
     #overlay .stage-set.stage-right img, #overlay .stage-set.stage-left img {
       -webkit-filter: grayscale(100%);
       filter: grayscale(100%); }
     @media (max-width: 992px) {
       #overlay .stage-set.stage-right, #overlay .stage-set.stage-left {
         display: none; } }
+    #overlay .stage-set.stage-right .caption, #overlay .stage-set.stage-left .caption {
+      display: none; }
     @media (min-width: 992px) {
       #overlay .stage-set {
         width: 1000px; } }

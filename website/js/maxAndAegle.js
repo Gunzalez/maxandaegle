@@ -107,7 +107,7 @@
 
             $stage.append($stageSets);
             for(var s=0; s<sets.length; s++){
-                $stageSets.append($('<div class="stage-set stage-'+ sets[s] +'"><img src="../images/waiting.png" class="image-' + sets[s] + '" /></div>'));
+                $stageSets.append($('<div class="stage-set stage-'+ sets[s] +'"><img src="../images/waiting.png" class="image-' + sets[s] + '" /><div class="caption"><p /></div></div>'));
             }
 
             overlay.append($stage);
@@ -158,7 +158,10 @@
         getImageData: function(){
             var thumbnails =  maxAndAegle.gallery.els.thumbnails;
             for(var t=0; t<thumbnails.length; t++){
-                maxAndAegle.gallery.images.push($(thumbnails[t]).attr('href'));
+                maxAndAegle.gallery.images.push({
+                    href : $(thumbnails[t]).attr('href'),
+                    caption: $(thumbnails[t]).attr('title')
+                });
             }
         },
 
@@ -178,9 +181,12 @@
                 prevIndex = count;
             }
 
-            maxAndAegle.gallery.overlay.find('.image-right').attr('src', maxAndAegle.gallery.images[nextIndex]);
-            maxAndAegle.gallery.overlay.find('.image-center').attr('src', maxAndAegle.gallery.images[index]);
-            maxAndAegle.gallery.overlay.find('.image-left').attr('src', maxAndAegle.gallery.images[prevIndex]);
+            maxAndAegle.gallery.overlay.find('.image-right').attr('src', maxAndAegle.gallery.images[nextIndex].href);
+
+            maxAndAegle.gallery.overlay.find('.image-center').attr('src', maxAndAegle.gallery.images[index].href);
+            maxAndAegle.gallery.overlay.find('.stage-center .caption p').text("").text(maxAndAegle.gallery.images[index].caption);
+
+            maxAndAegle.gallery.overlay.find('.image-left').attr('src', maxAndAegle.gallery.images[prevIndex].href);
         },
 
         init: function () {
