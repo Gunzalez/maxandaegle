@@ -62,7 +62,9 @@
             maxAndAegle.homepageLink.isTouchDevice = 'ontouchstart' in document.documentElement;
 
             if( !maxAndAegle.homepageLink.isTouchDevice ) {
+
                 $('html').addClass('hover');
+
                 maxAndAegle.homepageLink.tiltInit();
             }
         }
@@ -94,10 +96,6 @@
             maxAndAegle.gallery.overlay = $('<div id="overlay" />');
 
             $('body').prepend(maxAndAegle.gallery.overlay);
-
-            // $(maxAndAegle.gallery.overlay).on('click', function () {
-            //     maxAndAegle.gallery.hideOverlay();
-            // });
 
             var $stage = $('<div id="stage" />'),
                 $stageSets = $('<div class="stage-sets" />'),
@@ -192,17 +190,12 @@
             if(maxAndAegle.gallery.els.parentNode){
 
                 maxAndAegle.gallery.createOverlay();
-
                 maxAndAegle.gallery.getImageData();
 
                 maxAndAegle.gallery.els.parentNode.on('click', 'a', function (evt) {
-
                     evt.preventDefault();
-
                     maxAndAegle.gallery.showOverlay();
-
                     maxAndAegle.gallery.setUpImagesWithIndex($(maxAndAegle.gallery.els.thumbnails).index(this));
-
                 });
             }
         }
@@ -268,9 +261,11 @@
             maxAndAegle.contact.els.form.on('submit', function () {
 
                 maxAndAegle.contact.els.form.find('.error').removeClass('error');
+
                 maxAndAegle.contact.isValid = true;
 
                 maxAndAegle.contact.fields = maxAndAegle.contact.els.form.find('[required]');
+
                 maxAndAegle.contact.fields.each(function (index, item) {
 
                     switch (item.type){
