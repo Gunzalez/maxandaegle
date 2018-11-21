@@ -182,14 +182,13 @@
             }
 
             maxAndAegle.gallery.overlay.find('.image-right').attr('src', maxAndAegle.gallery.images[nextIndex].href);
-
             maxAndAegle.gallery.overlay.find('.image-center').attr('src', maxAndAegle.gallery.images[index].href);
-            maxAndAegle.gallery.overlay.find('.stage-center .caption p').text("").text(maxAndAegle.gallery.images[index].caption);
-
+            maxAndAegle.gallery.overlay.find('.stage-center .caption p').text("").text(maxAndAegle.gallery.images[index].caption); // ensure previous copy is removed
             maxAndAegle.gallery.overlay.find('.image-left').attr('src', maxAndAegle.gallery.images[prevIndex].href);
         },
 
         init: function () {
+
             if(maxAndAegle.gallery.els.parentNode){
 
                 maxAndAegle.gallery.createOverlay();

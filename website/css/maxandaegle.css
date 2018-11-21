@@ -717,17 +717,21 @@ nav#menu {
       border: 2px solid white;
       transition: all 1s; }
     #overlay .stage-set .caption {
-      position: absolute;
-      left: 32px;
-      right: 32px;
-      bottom: 2px;
-      height: 120px;
       background: rgba(0, 0, 0, 0.6);
       color: white;
-      padding: 10px 30px;
-      font-size: 1.8rem;
+      padding: 10px 15px;
+      font-size: 1.2rem;
       font-weight: 300;
       font-style: italic; }
+      @media (min-width: 992px) {
+        #overlay .stage-set .caption {
+          position: absolute;
+          left: 32px;
+          right: 32px;
+          bottom: 2px;
+          height: 120px;
+          padding: 10px 30px;
+          font-size: 1.8rem; } }
     #overlay .stage-set.stage-right img, #overlay .stage-set.stage-left img {
       -webkit-filter: grayscale(100%);
       filter: grayscale(100%); }
