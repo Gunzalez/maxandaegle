@@ -630,34 +630,30 @@ nav#menu {
       color: #e57ab1; }
 
 .no-scroll {
-  overflow: hidden; }
+  overflow: hidden;
+  margin-right: 15px; }
 
 #overlay {
   display: none;
-  /* Hidden by default */
   position: fixed;
-  /* Stay in place */
   z-index: 100;
-  /* Sit on top */
   left: 0;
   top: 0;
-  width: 100%;
-  /* Full width */
-  height: 100%;
-  /* Full height */
-  overflow-y: scroll;
   right: 0;
   bottom: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
   background-color: white;
-  /* Fallback color */
   background-color: rgba(255, 255, 255, 0.7);
-  /* Black w/ opacity */ }
+  opacity: 0;
+  transition: opacity 500ms; }
   @media (min-width: 576px) {
     #overlay {
       padding-top: 80px;
       /* Location of the box */ } }
   #overlay.show {
-    display: block; }
+    opacity: 1; }
   #overlay #stage {
     overflow: hidden;
     position: static;
@@ -681,7 +677,7 @@ nav#menu {
         font-size: 1.6rem;
         line-height: 42px;
         margin: 0 auto;
-        color: #000000; }
+        color: #000104; }
       @media (min-width: 992px) {
         #overlay .gallery-nav a {
           width: 129px;
@@ -742,8 +738,11 @@ nav#menu {
     #overlay .stage-set img {
       width: 100%;
       display: block;
-      border: 2px solid white;
+      border: 2px solid #000104;
       transition: all 1s; }
+      @media (min-width: 992px) {
+        #overlay .stage-set img {
+          border: 2px solid white; } }
     #overlay .stage-set .caption {
       background: rgba(0, 0, 0, 0.8);
       color: white;
@@ -791,7 +790,7 @@ nav#menu {
         font-size: 1.6rem;
         line-height: 42px;
         margin: 0 auto;
-        color: #000000; }
+        color: #000104; }
 
 .gallery.section {
   position: relative;

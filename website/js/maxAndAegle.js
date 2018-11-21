@@ -82,13 +82,16 @@
         },
 
         hideOverlay: function(){
-            $(maxAndAegle.gallery.overlay).removeClass('show');
+            $(maxAndAegle.gallery.overlay).removeClass('show').removeAttr('style');
             $('html').removeClass('no-scroll');
         },
 
         showOverlay: function(){
-            $(maxAndAegle.gallery.overlay).addClass('show');
             $('html').addClass('no-scroll');
+            $(maxAndAegle.gallery.overlay).css('display', 'block');
+            setTimeout(function () {
+                $(maxAndAegle.gallery.overlay).addClass('show');
+            }, 0);
         },
 
         createOverlay: function(){
