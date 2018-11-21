@@ -650,9 +650,9 @@ nav#menu {
   bottom: 0;
   background-color: white;
   /* Fallback color */
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.7);
   /* Black w/ opacity */ }
-  @media (min-width: 992px) {
+  @media (min-width: 576px) {
     #overlay {
       padding-top: 80px;
       /* Location of the box */ } }
@@ -682,8 +682,23 @@ nav#menu {
         line-height: 42px;
         margin: 0 auto;
         color: #000000; }
+      @media (min-width: 992px) {
+        #overlay .gallery-nav a {
+          width: 129px;
+          height: 112px;
+          display: block;
+          background-image: url(../images/gallery/arrow-green.svg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          text-align: center;
+          transition: all 250ms; }
+          #overlay .gallery-nav a i {
+            display: none; }
+          #overlay .gallery-nav a:hover {
+            background-image: url(../images/gallery/arrow-white.svg); } }
     #overlay .gallery-nav.nav-left {
-      left: 20px; }
+      left: 20px;
+      transform: scaleX(-1); }
     #overlay .gallery-nav.nav-right {
       right: 20px; }
     @media (min-width: 768px) {
@@ -694,6 +709,11 @@ nav#menu {
           left: 30px; }
         #overlay .gallery-nav.nav-right {
           right: 30px; } }
+    @media (min-width: 992px) {
+      #overlay .gallery-nav.nav-left {
+        left: 40px; }
+      #overlay .gallery-nav.nav-right {
+        right: 40px; } }
   #overlay .stage-sets {
     width: 100%;
     position: absolute;
@@ -754,11 +774,6 @@ nav#menu {
       #overlay .stage-set {
         width: 1000px;
         padding: 0 30px; } }
-  #overlay .hexagon {
-    background: url("../images/gallery-arrow.png");
-    background-size: cover; }
-    #overlay .hexagon.direction-next {
-      transform: scaleX(-1); }
   #overlay .closeOverlay {
     position: absolute;
     right: 15px;
