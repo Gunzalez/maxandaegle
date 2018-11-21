@@ -669,14 +669,14 @@ nav#menu {
 
             @media (min-width: $breakpoint2){
                 bottom: auto;
-                top: 35%;
+                top: 40%;
 
                 &.nav-left {
-                    left: 7%;
+                    left: 30px;
                 }
 
                 &.nav-right {
-                    right: 7%;
+                    right: 30px;
                 }
             }
         }
@@ -715,14 +715,12 @@ nav#menu {
         }
 
         .caption {
-            background: rgba(0,0,0,0.6);
+            background: rgba(0,0,0,0.8);
             color: white;
             padding: 10px 15px;
             font-size: 1.2rem;
             font-weight: 300;
             font-style: italic;
-
-
 
             @media (min-width: $breakpoint3){
 

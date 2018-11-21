@@ -684,11 +684,11 @@ nav#menu {
       @media (min-width: 768px) {
         #overlay #stage .gallery-nav {
           bottom: auto;
-          top: 35%; }
+          top: 40%; }
           #overlay #stage .gallery-nav.nav-left {
-            left: 7%; }
+            left: 30px; }
           #overlay #stage .gallery-nav.nav-right {
-            right: 7%; } }
+            right: 30px; } }
   #overlay .stage-sets {
     width: 100%;
     position: absolute;
@@ -717,7 +717,7 @@ nav#menu {
       border: 2px solid white;
       transition: all 1s; }
     #overlay .stage-set .caption {
-      background: rgba(0, 0, 0, 0.6);
+      background: rgba(0, 0, 0, 0.8);
       color: white;
       padding: 10px 15px;
       font-size: 1.2rem;
