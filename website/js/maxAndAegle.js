@@ -95,9 +95,9 @@
 
             $('body').prepend(maxAndAegle.gallery.overlay);
 
-            $(maxAndAegle.gallery.overlay).on('click', function () {
-                maxAndAegle.gallery.hideOverlay();
-            });
+            // $(maxAndAegle.gallery.overlay).on('click', function () {
+            //     maxAndAegle.gallery.hideOverlay();
+            // });
 
             var $stage = $('<div id="stage" />'),
                 $stageSets = $('<div class="stage-sets" />'),
@@ -113,10 +113,10 @@
             overlay.append($stage);
 
             for(var b=0; b<buttons.length; b++){
-                $stage.append($('<div class="gallery-nav nav-'+ buttons[b] +'"><a href="#" class="move-images hexagon direction-'+ buttons[b] +'" data-direction="'+ buttons[b] + '"><i class="fas fa-chevron-'+ buttons[b] +'"></i></a></div>'));
+                overlay.append($('<div class="gallery-nav nav-'+ buttons[b] +'"><a href="#" class="move-images hexagon direction-'+ buttons[b] +'" data-direction="'+ buttons[b] + '"><i class="fas fa-chevron-'+ buttons[b] +'"></i></a></div>'));
             }
 
-            $stage.on('click', '.move-images', function (evt) {
+            overlay.on('click', '.move-images', function (evt) {
                 evt.preventDefault();
 
                 var buttonClicked = this,

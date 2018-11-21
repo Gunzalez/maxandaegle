@@ -622,7 +622,8 @@ nav#menu {
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow-y: scroll;
-    right: 0; bottom: 0;
+    right: 0;
+    bottom: 0;
     background-color: rgb(255,255,255); /* Fallback color */
     background-color: rgba(255,255,255,0.6); /* Black w/ opacity */
 
@@ -636,51 +637,54 @@ nav#menu {
 
     #stage {
         overflow: hidden;
-        position: relative;
+        position: static;
         height: 100%;
         width: 100%;
 
-        .gallery-nav {
-            position: absolute;
-            bottom: 20px;
+        @media (min-width: $breakpoint3){
+            position: relative;
+        }
+    }
 
-            a {
-                width: 49px;
-                height: 42px;
-                display: block;
-                background-image: url(../images/svg-hexagon-green.svg);
-                background-size: cover;
-                background-repeat: no-repeat;
-                text-align: center;
+    .gallery-nav {
+        position: absolute;
+        bottom: 20px;
 
-                i {
-                    font-size: 1.6rem;
-                    line-height: 42px;
-                    margin: 0 auto;
-                    color: #000000;
-                }
+        a {
+            width: 49px;
+            height: 42px;
+            display: block;
+            background-image: url(../images/svg-hexagon-green.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            text-align: center;
+
+            i {
+                font-size: 1.6rem;
+                line-height: 42px;
+                margin: 0 auto;
+                color: #000000;
             }
+        }
+
+        &.nav-left {
+            left: 20px;
+        }
+
+        &.nav-right {
+            right: 20px;
+        }
+
+        @media (min-width: $breakpoint2){
+            bottom: auto;
+            top: 40%;
 
             &.nav-left {
-                left: 20px;
+                left: 30px;
             }
 
             &.nav-right {
-                right: 20px;
-            }
-
-
-            @media (min-width: $breakpoint2){
-                bottom: auto;
-                top: 40%;
-
-                &.nav-left {
-                    left: 30px;
-                }
-
-                &.nav-right {
-                    right: 30px;
-                }
+                right: 30px;
             }
         }
     }
@@ -688,16 +692,19 @@ nav#menu {
     .stage-sets {
         width: 100%;
         position: absolute;
-        padding: 80px 0 0 0;
+        padding: 80px 0;
         background-color: rgb(0,0,0); /* Fallback color */
         background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
         left: 50%;
         -webkit-transform: translateX(-50%);
         height: 100%;
 
+        @media (min-width: $breakpoint1){
+            height: auto;
+        }
+
         @media (min-width: $breakpoint3){
             padding: 40px 0;
-            height: auto;
             width: 3000px;
             border-top: 2px solid white;
             border-bottom: 2px solid white;

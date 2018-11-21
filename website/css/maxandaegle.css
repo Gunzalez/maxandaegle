@@ -660,41 +660,44 @@ nav#menu {
     display: block; }
   #overlay #stage {
     overflow: hidden;
-    position: relative;
+    position: static;
     height: 100%;
     width: 100%; }
-    #overlay #stage .gallery-nav {
-      position: absolute;
-      bottom: 20px; }
-      #overlay #stage .gallery-nav a {
-        width: 49px;
-        height: 42px;
-        display: block;
-        background-image: url(../images/svg-hexagon-green.svg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        text-align: center; }
-        #overlay #stage .gallery-nav a i {
-          font-size: 1.6rem;
-          line-height: 42px;
-          margin: 0 auto;
-          color: #000000; }
-      #overlay #stage .gallery-nav.nav-left {
-        left: 20px; }
-      #overlay #stage .gallery-nav.nav-right {
-        right: 20px; }
-      @media (min-width: 768px) {
-        #overlay #stage .gallery-nav {
-          bottom: auto;
-          top: 40%; }
-          #overlay #stage .gallery-nav.nav-left {
-            left: 30px; }
-          #overlay #stage .gallery-nav.nav-right {
-            right: 30px; } }
+    @media (min-width: 992px) {
+      #overlay #stage {
+        position: relative; } }
+  #overlay .gallery-nav {
+    position: absolute;
+    bottom: 20px; }
+    #overlay .gallery-nav a {
+      width: 49px;
+      height: 42px;
+      display: block;
+      background-image: url(../images/svg-hexagon-green.svg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      text-align: center; }
+      #overlay .gallery-nav a i {
+        font-size: 1.6rem;
+        line-height: 42px;
+        margin: 0 auto;
+        color: #000000; }
+    #overlay .gallery-nav.nav-left {
+      left: 20px; }
+    #overlay .gallery-nav.nav-right {
+      right: 20px; }
+    @media (min-width: 768px) {
+      #overlay .gallery-nav {
+        bottom: auto;
+        top: 40%; }
+        #overlay .gallery-nav.nav-left {
+          left: 30px; }
+        #overlay .gallery-nav.nav-right {
+          right: 30px; } }
   #overlay .stage-sets {
     width: 100%;
     position: absolute;
-    padding: 80px 0 0 0;
+    padding: 80px 0;
     background-color: black;
     /* Fallback color */
     background-color: rgba(0, 0, 0, 0.4);
@@ -702,10 +705,12 @@ nav#menu {
     left: 50%;
     -webkit-transform: translateX(-50%);
     height: 100%; }
+    @media (min-width: 576px) {
+      #overlay .stage-sets {
+        height: auto; } }
     @media (min-width: 992px) {
       #overlay .stage-sets {
         padding: 40px 0;
-        height: auto;
         width: 3000px;
         border-top: 2px solid white;
         border-bottom: 2px solid white; } }
