@@ -765,13 +765,11 @@ nav#menu {
     }
 }
 
-
-
 .gallery {
     &.section {
         position: relative;
         overflow: hidden;
-        //background-color: pink;
+        padding-bottom: 30px;
 
         .row-hex {
             margin-top: 0;

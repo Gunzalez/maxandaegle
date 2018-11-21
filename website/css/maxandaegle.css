@@ -751,7 +751,8 @@ nav#menu {
 
 .gallery.section {
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  padding-bottom: 30px; }
   .gallery.section .row-hex {
     margin-top: 0; }
   .gallery.section .bg-hex {
