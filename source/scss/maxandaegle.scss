@@ -617,7 +617,6 @@ nav#menu {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 100; /* Sit on top */
-    padding-top: 80px; /* Location of the box */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -626,6 +625,10 @@ nav#menu {
     right: 0; bottom: 0;
     background-color: rgb(255,255,255); /* Fallback color */
     background-color: rgba(255,255,255,0.6); /* Black w/ opacity */
+
+    @media (min-width: $breakpoint3){
+        padding-top: 80px; /* Location of the box */
+    }
 
     &.show {
         display: block;
@@ -685,7 +688,7 @@ nav#menu {
     .stage-sets {
         width: 100%;
         position: absolute;
-        padding: 40px 0;
+        padding: 80px 0 0 0;
         background-color: rgb(0,0,0); /* Fallback color */
         background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
         left: 50%;
@@ -693,6 +696,7 @@ nav#menu {
         height: 100%;
 
         @media (min-width: $breakpoint3){
+            padding: 40px 0;
             height: auto;
             width: 3000px;
             border-top: 2px solid white;
@@ -702,9 +706,8 @@ nav#menu {
 
     .stage-set {
         width: 100%;
-        padding: 0 30px;
+        padding: 0 20px;
         display: inline-block;
-        //background: url("../images/loading-spinner.gif") center center no-repeat #ffffff;
         position: relative;
 
         img {
@@ -722,8 +725,11 @@ nav#menu {
             font-weight: 300;
             font-style: italic;
 
-            @media (min-width: $breakpoint3){
+            p {
+                padding-bottom: 0;
+            }
 
+            @media (min-width: $breakpoint3){
                 position: absolute;
                 left: 32px;
                 right: 32px;
@@ -732,8 +738,6 @@ nav#menu {
                 padding: 10px 30px;
                 font-size: 1.8rem;
             }
-
-
         }
 
         &.stage-right,
@@ -754,6 +758,7 @@ nav#menu {
 
         @media (min-width: $breakpoint3){
             width: 1000px;
+            padding: 0 30px;
         }
     }
 

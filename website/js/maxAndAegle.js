@@ -107,7 +107,7 @@
 
             $stage.append($stageSets);
             for(var s=0; s<sets.length; s++){
-                $stageSets.append($('<div class="stage-set stage-'+ sets[s] +'"><img src="../images/waiting.png" class="image-' + sets[s] + '" /><div class="caption"><p /></div></div>'));
+                $stageSets.append($('<div class="stage-set stage-'+ sets[s] +'"><img class="image-' + sets[s] + '" /><div class="caption"><p /></div></div>'));
             }
 
             overlay.append($stage);

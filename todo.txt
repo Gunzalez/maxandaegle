@@ -14,6 +14,10 @@ HOURS
 Sunday - 4
 Monday - 8
 Tuesday - 7
+Wednesday - 6
+
+add transitions ?
+buttons svg, maybe job done?
 
 
 
