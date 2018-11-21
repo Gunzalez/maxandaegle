@@ -630,7 +630,8 @@ nav#menu {
       color: #e57ab1; }
 
 .no-scroll {
-  overflow: hidden; }
+  overflow: hidden;
+  margin-right: 15px; }
 
 #overlay {
   display: none;
@@ -747,3 +748,14 @@ nav#menu {
         line-height: 42px;
         margin: 0 auto;
         color: #000000; }
+
+.gallery.section {
+  position: relative;
+  overflow: hidden; }
+  .gallery.section .row-hex {
+    margin-top: 0; }
+  .gallery.section .bg-hex {
+    top: 0; }
+  .gallery.section .hexagon-in2 {
+    background-size: cover;
+    background-repeat: no-repeat; }

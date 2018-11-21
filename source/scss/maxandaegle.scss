@@ -1,6 +1,7 @@
 @import "colours";
 @import "furniture";
 @import "mixins";
+//@import "hex";
 
 body {
     background: #ffffff;
@@ -608,6 +609,7 @@ nav#menu {
 
 .no-scroll {
     overflow: hidden;
+    margin-right: 15px;
 }
 
 
@@ -759,6 +761,29 @@ nav#menu {
                 margin: 0 auto;
                 color: #000000;
             }
+        }
+    }
+}
+
+
+
+.gallery {
+    &.section {
+        position: relative;
+        overflow: hidden;
+        //background-color: pink;
+
+        .row-hex {
+            margin-top: 0;
+        }
+
+        .bg-hex {
+            top: 0;
+        }
+
+        .hexagon-in2 {
+            background-size: cover;
+            background-repeat: no-repeat;
         }
     }
 }
