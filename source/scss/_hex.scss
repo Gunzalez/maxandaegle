@@ -1,0 +1,161 @@
+// Merge hex maps with bootstrap ones
+$hex-grid-breakpoints: map_merge($hex-grid-breakpoints, $grid-breakpoints);
+$hex-container-max-widths: map_merge($hex-container-max-widths, $container-max-widths);
+
+.container-hex {
+  @include make-container-max-widths($hex-container-max-widths, $hex-grid-breakpoints);
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media(min-width: map_get($grid-breakpoints, sm)) {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+.row-hex {
+  margin-top: -50px;
+}
+
+.col-hex {
+  @include make-hex-sizes();
+  text-align: center;
+
+  @media(max-width: (map_get($grid-breakpoints, md)) - 1) {
+    &-offset {
+      .hex {
+        float: right;
+      }
+    }
+    &-spacer {
+      display: none;
+    }
+  }
+
+  .hex {
+    overflow: hidden;
+    visibility: hidden;
+    -webkit-transform: rotate(120deg);
+    -moz-transform: rotate(120deg);
+    -ms-transform: rotate(120deg);
+    -o-transform: rotate(120deg);
+    transform: rotate(120deg);
+    background-color: rgba(255, 255, 255, 0.4);
+    text-align: center;
+    display: block;
+    position: relative;
+    z-index: 50;
+
+    .hexagon-in1 {
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      -webkit-transform: rotate(-60deg);
+      -moz-transform: rotate(-60deg);
+      -ms-transform: rotate(-60deg);
+      -o-transform: rotate(-60deg);
+      transform: rotate(-60deg);
+    }
+
+    .hexagon-in2 {
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      opacity: 1;
+      background: rgba(255, 255, 255, 0.5);
+      visibility: visible;
+      -webkit-transform: rotate(-60deg);
+      -moz-transform: rotate(-60deg);
+      -ms-transform: rotate(-60deg);
+      -o-transform: rotate(-60deg);
+      transform: rotate(-60deg);
+    }
+
+    &-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 140%;
+      font-size: 1.4rem;
+      line-height: 1.2;
+      z-index: 5;
+    }
+  }
+
+  .hex.empty {
+    .hexagon-in2 {
+      background-color: rgba(255, 255, 255, 0);
+    }
+  }
+
+  .hex.t-33 {
+    .hexagon-in2 {
+      background-color: rgba(255, 255, 255, 0.33);
+    }
+  }
+
+  .hex.t-66 {
+    .hexagon-in2 {
+      background-color: rgba(255, 255, 255, 0.66);
+    }
+  }
+
+  .hex.fan-bg {
+    .hexagon-in2 {
+      background: transparent;
+      background-image: url('/images/hex/hex-fan.png');
+      background-size: contain;
+      background-position: center;
+    }
+
+    &.fill {
+      .hexagon-in2 {
+        background-image: url('/images/hex/hex-fan-fill.png');
+      }
+    }
+
+    &.stroke {
+      .hexagon-in2 {
+        background-image: url('/images/hex/hex-fan-stroke.png');
+      }
+    }
+
+    &.stroke-musk {
+      .hexagon-in2 {
+        background-image: url('/images/hex/hex-fan-stroke-musk.png');
+      }
+    }
+  }
+
+  a.hex {
+    text-decoration: none;
+
+    .hexagon-in2 {
+      text-decoration: none;
+    }
+
+    &:hover, &:active, &:focus {
+      text-decoration: none;
+
+      .hexagon-in2 {
+        text-decoration: none;
+        background-color: rgba($white, 0.7);
+        color: $dark;
+
+        &.join-us {
+          animation: none;
+          background-color: $red;
+        }
+      }
+    }
+
+    &:active, &:focus {
+      .hexagon-in2 {
+        background-color: $blue;
+      }
+    }
+  }
+}
