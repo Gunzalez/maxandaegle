@@ -114,7 +114,7 @@
             overlay.append($stage);
 
             for(var b=0; b<buttons.length; b++){
-                overlay.append($('<div class="gallery-nav nav-'+ buttons[b] +'"><a href="#" class="move-images direction-'+ buttons[b] +'" data-direction="'+ buttons[b] + '"><i class="fas fa-chevron-'+ buttons[b] +'"></i></a></div>'));
+                overlay.append($('<div class="gallery-nav nav-'+ buttons[b] +'"><a href="#" class="move-images hexagon direction-'+ buttons[b] +'" data-direction="'+ buttons[b] + '"><i class="fas fa-chevron-'+ buttons[b] +'"></i></a></div>'));
             }
 
             overlay.on('click', '.move-images', function (evt) {

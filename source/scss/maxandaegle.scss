@@ -3,6 +3,8 @@
 @import "mixins";
 //@import "hex";
 
+//html { margin-left: calc(100vw - 100%); }
+
 body {
     background: #ffffff;
     color: $brand-pitch-black;
@@ -585,8 +587,6 @@ nav#menu {
                   }
 
                   @media (min-width: $breakpoint3){
-
-
                       padding-top: 15px;
                       padding-bottom: 15px;
                   }
@@ -609,7 +609,15 @@ nav#menu {
 
 .no-scroll {
     overflow: hidden;
-    margin-right: 15px;
+
+    @media (min-width: $breakpoint3){
+        margin-right: 15px;
+    }
+
+    body {
+
+        position: relative;
+    }
 }
 
 #overlay {
@@ -622,11 +630,13 @@ nav#menu {
     bottom: 0;
     width: 100%;
     height: 100%;
-    overflow-y: scroll;
     background-color: rgb(255,255,255);
     background-color: rgba(255,255,255,0.7);
     opacity: 0;
-    transition: opacity 500ms;
+    transition: opacity 250ms;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
+    overflow-y: auto;
 
     @media (min-width: $breakpoint1){
         padding-top: 80px; /* Location of the box */
@@ -801,6 +811,14 @@ nav#menu {
         @media (min-width: $breakpoint3){
             width: 1000px;
             padding: 0 30px;
+        }
+    }
+
+    .hexagon {
+        background-size: cover;
+
+        &.direction-left {
+            transform:scaleX(-1);
         }
     }
 
