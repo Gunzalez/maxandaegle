@@ -699,8 +699,9 @@ nav#menu {
           #overlay .gallery-nav a:hover {
             background-image: url(../images/gallery/arrow-white.svg); } }
     #overlay .gallery-nav.nav-left {
-      left: 20px;
-      transform: scaleX(-1); }
+      left: 20px; }
+      #overlay .gallery-nav.nav-left a {
+        transform: scaleX(-1); }
     #overlay .gallery-nav.nav-right {
       right: 20px; }
     @media (min-width: 768px) {

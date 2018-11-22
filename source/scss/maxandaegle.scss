@@ -699,7 +699,10 @@ nav#menu {
 
         &.nav-left {
             left: 20px;
-            transform:scaleX(-1);
+
+            a {
+                transform:scaleX(-1);
+            }
         }
 
         &.nav-right {
