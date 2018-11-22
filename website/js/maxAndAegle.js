@@ -114,7 +114,7 @@
             overlay.append($stage);
 
             for(var b=0; b<buttons.length; b++){
-                overlay.append($('<div class="gallery-nav nav-'+ buttons[b] +'"><a href="#" class="move-images hexagon direction-'+ buttons[b] +'" data-direction="'+ buttons[b] + '"><i class="fas fa-chevron-'+ buttons[b] +'"></i></a></div>'));
+                overlay.append($('<div class="gallery-nav nav-'+ buttons[b] +'"><a href="#" class="move-images direction-'+ buttons[b] +'" data-direction="'+ buttons[b] + '"><i class="fas fa-chevron-right"></i></a></div>'));
             }
 
             overlay.on('click', '.move-images', function (evt) {
@@ -186,6 +186,14 @@
             maxAndAegle.gallery.overlay.find('.image-center').attr('src', maxAndAegle.gallery.images[index].href);
             maxAndAegle.gallery.overlay.find('.stage-center .caption p').text("").text(maxAndAegle.gallery.images[index].caption); // ensure previous copy is removed
             maxAndAegle.gallery.overlay.find('.image-left').attr('src', maxAndAegle.gallery.images[prevIndex].href);
+        },
+
+        resize: function(){
+
+            if($('#overlay').hasClass('show')){
+                maxAndAegle.gallery.hideOverlay();
+            }
+
         },
 
         init: function () {
@@ -300,6 +308,28 @@
         maxAndAegle.homepageLink.init();
         maxAndAegle.contact.init();
         maxAndAegle.gallery.init();
+
+        // resize triggers
+        $(window).on('resize', function () {
+
+            var newWidth = $(window).width(),
+                oldWidth = maxAndAegle.properties.windowWidth;
+
+            if (oldWidth !== newWidth) {
+                maxAndAegle.properties.windowWidth = newWidth;
+                maxAndAegle.resize();
+            }
+        });
+
+        // trigger initial resize, just to be sure
+        maxAndAegle.resize();
+        $(window).trigger('resize');
+    };
+
+
+    // main resize
+    maxAndAegle.resize = function () {
+        maxAndAegle.gallery.resize();
     };
 
     // main init call

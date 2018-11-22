@@ -817,14 +817,6 @@ nav#menu {
         }
     }
 
-    .hexagon {
-        background-size: cover;
-
-        &.direction-left {
-            transform:scaleX(-1);
-        }
-    }
-
     .closeOverlay {
         position: absolute;
         right: 15px;

@@ -780,10 +780,6 @@ nav#menu {
       #overlay .stage-set {
         width: 1000px;
         padding: 0 30px; } }
-  #overlay .hexagon {
-    background-size: cover; }
-    #overlay .hexagon.direction-left {
-      transform: scaleX(-1); }
   #overlay .closeOverlay {
     position: absolute;
     right: 15px;
