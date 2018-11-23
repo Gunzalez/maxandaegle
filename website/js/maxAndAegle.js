@@ -157,12 +157,16 @@
         },
 
         getImageData: function(){
-            var thumbnails =  maxAndAegle.gallery.els.thumbnails;
+            var thumbnails =  maxAndAegle.gallery.els.thumbnails,
+                imagesArr = [];
             for(var t=0; t<thumbnails.length; t++){
                 maxAndAegle.gallery.images.push({
                     href : $(thumbnails[t]).attr('href'),
                     caption: $(thumbnails[t]).attr('title')
                 });
+                // for image preloading
+                imagesArr[t] = new Image();
+                imagesArr[t].src = $(thumbnails[t]).attr('href');
             }
         },
 
