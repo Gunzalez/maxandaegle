@@ -684,8 +684,8 @@ nav#menu {
         color: #000104; }
       @media (min-width: 992px) {
         #overlay .gallery-nav a {
-          width: 129px;
-          height: 112px;
+          width: 77px;
+          height: 67px;
           background-image: url(../images/gallery/arrow-green.svg);
           background-size: cover;
           background-repeat: no-repeat;
@@ -705,7 +705,7 @@ nav#menu {
       #overlay .gallery-nav {
         bottom: auto;
         top: 50%;
-        margin-top: -56px; } }
+        margin-top: -34px; } }
   #overlay .stage-sets {
     width: 100%;
     position: absolute;
@@ -726,6 +726,9 @@ nav#menu {
         width: 2400px;
         border-top: 2px solid white;
         border-bottom: 2px solid white; } }
+    @media (min-width: 1024px) {
+      #overlay .stage-sets {
+        width: 2700px; } }
     @media (min-width: 1800px) {
       #overlay .stage-sets {
         width: 3000px; } }
@@ -758,7 +761,7 @@ nav#menu {
           right: 32px;
           bottom: 2px;
           height: 120px;
-          padding: 10px 30px;
+          padding: 10px 20px;
           font-size: 1.8rem; } }
     #overlay .stage-set.stage-right img, #overlay .stage-set.stage-left img {
       -webkit-filter: grayscale(100%);
@@ -772,10 +775,12 @@ nav#menu {
       #overlay .stage-set {
         width: 800px;
         padding: 0 30px; } }
+    @media (min-width: 1024px) {
+      #overlay .stage-set {
+        width: 900px; } }
     @media (min-width: 1800px) {
       #overlay .stage-set {
-        width: 1000px;
-        padding: 0 30px; } }
+        width: 1000px; } }
   #overlay .closeOverlay {
     position: absolute;
     right: 15px;

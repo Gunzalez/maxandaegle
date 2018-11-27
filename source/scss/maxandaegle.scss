@@ -679,8 +679,8 @@ nav#menu {
             }
 
             @media (min-width: $breakpoint3){
-                width: 129px;
-                height: 112px;
+                width: 77px;
+                height: 67px;
                 background-image: url(../images/gallery/arrow-green.svg);
                 background-size: cover;
                 background-repeat: no-repeat;
@@ -712,7 +712,7 @@ nav#menu {
         @media (min-width: $breakpoint2){
             bottom: auto;
             top: 50%;
-            margin-top: -56px;
+            margin-top: -34px;
         }
     }
 
@@ -735,6 +735,10 @@ nav#menu {
             width: 2400px;
             border-top: 2px solid white;
             border-bottom: 2px solid white;
+        }
+
+        @media (min-width: $breakpoint4){
+            width: 2700px;
         }
 
         @media (min-width: $breakpoint6){
@@ -777,7 +781,7 @@ nav#menu {
                 right: 32px;
                 bottom: 2px;
                 height: 120px;
-                padding: 10px 30px;
+                padding: 10px 20px;
                 font-size: 1.8rem;
             }
         }
@@ -803,9 +807,12 @@ nav#menu {
             padding: 0 30px;
         }
 
+        @media (min-width: $breakpoint4){
+            width: 900px;
+        }
+
         @media (min-width: $breakpoint6){
             width: 1000px;
-            padding: 0 30px;
         }
     }
 
