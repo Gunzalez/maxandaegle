@@ -631,7 +631,11 @@ nav#menu {
 
 .no-scroll {
   overflow: hidden; }
+  @media (min-width: 992px) {
+    .no-scroll {
+      margin-right: 15px; } }
   .no-scroll body {
+    padding-right: inherit;
     position: relative; }
 
 #overlay {
@@ -726,9 +730,6 @@ nav#menu {
         width: 2400px;
         border-top: 2px solid white;
         border-bottom: 2px solid white; } }
-    @media (min-width: 1024px) {
-      #overlay .stage-sets {
-        width: 2700px; } }
     @media (min-width: 1800px) {
       #overlay .stage-sets {
         width: 3000px; } }
@@ -775,9 +776,6 @@ nav#menu {
       #overlay .stage-set {
         width: 800px;
         padding: 0 30px; } }
-    @media (min-width: 1024px) {
-      #overlay .stage-set {
-        width: 900px; } }
     @media (min-width: 1800px) {
       #overlay .stage-set {
         width: 1000px; } }

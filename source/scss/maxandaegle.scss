@@ -611,11 +611,12 @@ nav#menu {
     overflow: hidden;
 
     @media (min-width: $breakpoint3){
-        //margin-right: 15px;
+        margin-right: 15px;
     }
 
     body {
 
+        padding-right: inherit;
         position: relative;
     }
 }
@@ -737,10 +738,6 @@ nav#menu {
             border-bottom: 2px solid white;
         }
 
-        @media (min-width: $breakpoint4){
-            width: 2700px;
-        }
-
         @media (min-width: $breakpoint6){
             width: 3000px;
         }
@@ -805,10 +802,6 @@ nav#menu {
         @media (min-width: $breakpoint2){
             width: 800px;
             padding: 0 30px;
-        }
-
-        @media (min-width: $breakpoint4){
-            width: 900px;
         }
 
         @media (min-width: $breakpoint6){
