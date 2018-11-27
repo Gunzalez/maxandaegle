@@ -89,6 +89,16 @@
         showOverlay: function(){
             $('html').addClass('no-scroll');
             $(maxAndAegle.gallery.overlay).css('display', 'block');
+
+            var distanceFromSides = $('.stage-sets').width() - window.innerWidth,
+                position = 20;
+            if(distanceFromSides > 0){
+                position = position + (distanceFromSides /2)
+            }
+            $('.nav-left').css('left', position + 'px');
+            $('.nav-right').css('right', position + 'px');
+
+
             setTimeout(function () {
                 $(maxAndAegle.gallery.overlay).addClass('show');
             }, 0);
@@ -114,10 +124,10 @@
             overlay.append($stage);
 
             for(var b=0; b<buttons.length; b++){
-                overlay.append($('<div class="gallery-nav nav-'+ buttons[b] +'"><a href="#" class="move-images direction-'+ buttons[b] +'" data-direction="'+ buttons[b] + '"><i class="fas fa-chevron-right"></i></a></div>'));
+                $stageSets.append($('<div class="gallery-nav nav-'+ buttons[b] +'"><a href="#" class="move-images direction-'+ buttons[b] +'" data-direction="'+ buttons[b] + '"><i class="fas fa-chevron-right"></i></a></div>'));
             }
 
-            overlay.on('click', '.move-images', function (evt) {
+            $stageSets.on('click', '.move-images', function (evt) {
                 evt.preventDefault();
 
                 var buttonClicked = this,
@@ -164,7 +174,7 @@
                     href : $(thumbnails[t]).attr('href'),
                     caption: $(thumbnails[t]).attr('title')
                 });
-                // for image preloading
+                // for image pre-loading
                 imagesArr[t] = new Image();
                 imagesArr[t].src = $(thumbnails[t]).attr('href');
             }

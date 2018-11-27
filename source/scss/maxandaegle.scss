@@ -611,7 +611,7 @@ nav#menu {
     overflow: hidden;
 
     @media (min-width: $breakpoint3){
-        margin-right: 15px;
+        //margin-right: 15px;
     }
 
     body {
@@ -660,6 +660,7 @@ nav#menu {
     .gallery-nav {
         position: absolute;
         bottom: 20px;
+        z-index: 10;
 
         a {
             width: 49px;
@@ -680,7 +681,6 @@ nav#menu {
             @media (min-width: $breakpoint3){
                 width: 129px;
                 height: 112px;
-                display: block;
                 background-image: url(../images/gallery/arrow-green.svg);
                 background-size: cover;
                 background-repeat: no-repeat;
@@ -711,25 +711,8 @@ nav#menu {
 
         @media (min-width: $breakpoint2){
             bottom: auto;
-            top: 40%;
-
-            &.nav-left {
-                left: 30px;
-            }
-
-            &.nav-right {
-                right: 30px;
-            }
-        }
-
-        @media (min-width: $breakpoint3){
-            &.nav-left {
-                left: 40px;
-            }
-
-            &.nav-right {
-                right: 40px;
-            }
+            top: 50%;
+            margin-top: -56px;
         }
     }
 
@@ -747,11 +730,15 @@ nav#menu {
             height: auto;
         }
 
-        @media (min-width: $breakpoint3){
+        @media (min-width: $breakpoint2){
             padding: 40px 0;
-            width: 3000px;
+            width: 2400px;
             border-top: 2px solid white;
             border-bottom: 2px solid white;
+        }
+
+        @media (min-width: $breakpoint6){
+            width: 3000px;
         }
     }
 
@@ -767,7 +754,7 @@ nav#menu {
             border: 2px solid $brand-pitch-black;
             transition: all 1s;
 
-            @media (min-width: $breakpoint3){
+            @media (min-width: $breakpoint2){
                 border: 2px solid white;
             }
         }
@@ -784,7 +771,7 @@ nav#menu {
                 padding-bottom: 0;
             }
 
-            @media (min-width: $breakpoint3){
+            @media (min-width: $breakpoint2){
                 position: absolute;
                 left: 32px;
                 right: 32px;
@@ -802,7 +789,7 @@ nav#menu {
                 filter: grayscale(100%);
             }
 
-            @media (max-width: $breakpoint3){
+            @media (max-width: $breakpoint2){
                 display: none;
             }
 
@@ -811,7 +798,12 @@ nav#menu {
             }
         }
 
-        @media (min-width: $breakpoint3){
+        @media (min-width: $breakpoint2){
+            width: 800px;
+            padding: 0 30px;
+        }
+
+        @media (min-width: $breakpoint6){
             width: 1000px;
             padding: 0 30px;
         }

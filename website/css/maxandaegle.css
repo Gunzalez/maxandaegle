@@ -631,9 +631,6 @@ nav#menu {
 
 .no-scroll {
   overflow: hidden; }
-  @media (min-width: 992px) {
-    .no-scroll {
-      margin-right: 15px; } }
   .no-scroll body {
     position: relative; }
 
@@ -670,7 +667,8 @@ nav#menu {
         position: relative; } }
   #overlay .gallery-nav {
     position: absolute;
-    bottom: 20px; }
+    bottom: 20px;
+    z-index: 10; }
     #overlay .gallery-nav a {
       width: 49px;
       height: 42px;
@@ -688,7 +686,6 @@ nav#menu {
         #overlay .gallery-nav a {
           width: 129px;
           height: 112px;
-          display: block;
           background-image: url(../images/gallery/arrow-green.svg);
           background-size: cover;
           background-repeat: no-repeat;
@@ -707,16 +704,8 @@ nav#menu {
     @media (min-width: 768px) {
       #overlay .gallery-nav {
         bottom: auto;
-        top: 40%; }
-        #overlay .gallery-nav.nav-left {
-          left: 30px; }
-        #overlay .gallery-nav.nav-right {
-          right: 30px; } }
-    @media (min-width: 992px) {
-      #overlay .gallery-nav.nav-left {
-        left: 40px; }
-      #overlay .gallery-nav.nav-right {
-        right: 40px; } }
+        top: 50%;
+        margin-top: -56px; } }
   #overlay .stage-sets {
     width: 100%;
     position: absolute;
@@ -731,12 +720,15 @@ nav#menu {
     @media (min-width: 576px) {
       #overlay .stage-sets {
         height: auto; } }
-    @media (min-width: 992px) {
+    @media (min-width: 768px) {
       #overlay .stage-sets {
         padding: 40px 0;
-        width: 3000px;
+        width: 2400px;
         border-top: 2px solid white;
         border-bottom: 2px solid white; } }
+    @media (min-width: 1800px) {
+      #overlay .stage-sets {
+        width: 3000px; } }
   #overlay .stage-set {
     width: 100%;
     padding: 0 20px;
@@ -747,7 +739,7 @@ nav#menu {
       display: block;
       border: 2px solid #000104;
       transition: all 1s; }
-      @media (min-width: 992px) {
+      @media (min-width: 768px) {
         #overlay .stage-set img {
           border: 2px solid white; } }
     #overlay .stage-set .caption {
@@ -759,7 +751,7 @@ nav#menu {
       font-style: italic; }
       #overlay .stage-set .caption p {
         padding-bottom: 0; }
-      @media (min-width: 992px) {
+      @media (min-width: 768px) {
         #overlay .stage-set .caption {
           position: absolute;
           left: 32px;
@@ -771,12 +763,16 @@ nav#menu {
     #overlay .stage-set.stage-right img, #overlay .stage-set.stage-left img {
       -webkit-filter: grayscale(100%);
       filter: grayscale(100%); }
-    @media (max-width: 992px) {
+    @media (max-width: 768px) {
       #overlay .stage-set.stage-right, #overlay .stage-set.stage-left {
         display: none; } }
     #overlay .stage-set.stage-right .caption, #overlay .stage-set.stage-left .caption {
       display: none; }
-    @media (min-width: 992px) {
+    @media (min-width: 768px) {
+      #overlay .stage-set {
+        width: 800px;
+        padding: 0 30px; } }
+    @media (min-width: 1800px) {
       #overlay .stage-set {
         width: 1000px;
         padding: 0 30px; } }
