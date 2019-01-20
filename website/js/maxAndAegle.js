@@ -53,7 +53,7 @@
                     // reset:          true,   // If the tilt effect has to be reset on exit.
                     // glare:          false,  // Enables glare effect
                     // maxGlare:       1       // From 0 - 1.
-                })
+                });
             }
         },
 
@@ -93,7 +93,7 @@
             var distanceFromSides = $('.stage-sets').width() - window.innerWidth,
                 position = 20;
             if(distanceFromSides > 0){
-                position = position + (distanceFromSides /2)
+                position = position + (distanceFromSides/2);
             }
             $('.nav-left').css('left', position + 'px');
             $('.nav-right').css('right', position + 'px');
@@ -172,7 +172,7 @@
             for(var t=0; t<thumbnails.length; t++){
                 maxAndAegle.gallery.images.push({
                     href : $(thumbnails[t]).attr('href'),
-                    caption: $(thumbnails[t]).attr('title')
+                    caption: $(thumbnails[t]).attr('title') !== undefined ? $(thumbnails[t]).attr('title') : null
                 });
                 // for image pre-loading
                 imagesArr[t] = new Image();
@@ -199,6 +199,11 @@
             maxAndAegle.gallery.overlay.find('.image-right').attr('src', maxAndAegle.gallery.images[nextIndex].href);
             maxAndAegle.gallery.overlay.find('.image-center').attr('src', maxAndAegle.gallery.images[index].href);
             maxAndAegle.gallery.overlay.find('.stage-center .caption p').text("").text(maxAndAegle.gallery.images[index].caption); // ensure previous copy is removed
+            if(!maxAndAegle.gallery.images[index].caption){
+                maxAndAegle.gallery.overlay.find('.stage-center .caption').addClass('no-caption');
+            } else {
+                maxAndAegle.gallery.overlay.find('.stage-center .caption').removeClass('no-caption');
+            }
             maxAndAegle.gallery.overlay.find('.image-left').attr('src', maxAndAegle.gallery.images[prevIndex].href);
         },
 
@@ -308,8 +313,8 @@
                     }
                 });
 
-                return maxAndAegle.contact.isValid
-            })
+                return maxAndAegle.contact.isValid;
+            });
         }
     };
 

@@ -629,14 +629,9 @@ nav#menu {
     nav#menu ul li.active a:hover {
       color: #e57ab1; }
 
-.no-scroll {
-  overflow: hidden; }
-  @media (min-width: 992px) {
-    .no-scroll {
-      margin-right: 15px; } }
-  .no-scroll body {
-    padding-right: inherit;
-    position: relative; }
+.no-scroll body {
+  padding-right: inherit;
+  position: relative; }
 
 #overlay {
   display: none;
@@ -761,7 +756,6 @@ nav#menu {
           left: 32px;
           right: 32px;
           bottom: 2px;
-          height: 120px;
           padding: 10px 20px;
           font-size: 1.8rem; } }
     #overlay .stage-set.stage-right img, #overlay .stage-set.stage-left img {
@@ -797,6 +791,9 @@ nav#menu {
         line-height: 42px;
         margin: 0 auto;
         color: #000104; }
+
+.caption.no-caption {
+  display: none; }
 
 .gallery.section {
   position: relative;
